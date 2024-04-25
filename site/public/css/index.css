@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'Chinese Rocks';
+    src: url(/site/public/assets/fonts/chinese\ rocks\ rg.otf);
+}
+
+@font-face {
+    font-family: 'Montserrat Alternates';
+    src: url(/site/public/assets/fonts/MontserratAlternates-Light.ttf);
+}
+/* HEADER */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.header {
+    background-color: black;
+    font-family: 'Montserrat Alternates', sans-serif;
+    width: 100%;
+    height: 64px;
+    flex-direction: row;
+    display: flex;
+    position: fixed;
+    border: #7F1D1D solid;
+}
+
+.container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0.9%;
+    border: blue solid;
+}
+
+.navbar {
+    width: 90vw;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: green solid;
+}
+
+.navbar a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+}
+
+.navbar p {
+    font-size: 50px;
+    color: white;
+}
+
+.buton-header {
+    display: flex;
+    align-items: center;
+    width: 195px;
+    height: 40px;
+    gap: 10px;
+}
+
+.navbar .login {
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+
+    border: solid 2px #7F1D1D;
+    width: 62px;
+    height: 100%;
+    justify-content: space-between;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar .cadastro {
+    background-color: #7F1D1D;
+    color: white;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    
+    border: none;
+    width: 109px;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.login:hover {
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    width: 70px;
+    height: 120%;
+    
+}
+
+.cadastro:hover {
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    width: 120px;
+    height: 120%;
+}
+
