@@ -34,6 +34,7 @@ body {
     flex-direction: row;
     display: flex;
     position: fixed;
+    z-index: 2;
 }
 
 .container-header {
@@ -165,23 +166,37 @@ li:hover::after {
     height: 1380px;
     right: -50px;
     margin-top: -500px;
+    z-index: -1;
 }
 
 .banner h1 {
-    color: black;
+    color: white;
     font-family: 'Chinese Rocks', sans-serif;
     font-size: 40px;
-    /* z-index: 1; 
+    z-index: 1; 
+    bottom: 450px;
+    left: 310px;
     transform: translate(-50%, -50%);
-    position: absolute; */
+    position: absolute;
 }
 
 .banner h3 {
-    color: black;
+    color: white;
     font-family: 'Montserrat Alternates', sans-serif;
-    font-weight: 600;
     font-size: 20px;
-    /* z-index: 1; 
+    z-index: 1; 
     position: absolute;
-    transform: translate(-50%, -50%); */
+    bottom: 350px;
+    left: 350px;
+    transform: translate(-50%, -50%);
+}
+
+.banner button {
+    width: 137px;
+    height: 48px;
+    background-color: #334155;
+    color: white;
+    font-family: 'Montserrat Alternates', sans-serif;
+    border-radius: 8px;
+    font-weight: bold;
 }
