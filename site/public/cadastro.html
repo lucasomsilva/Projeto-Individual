@@ -46,9 +46,26 @@
     </header>
 
     <section>
-        <!-- <img class="background-cadastro" src="assets/img/imagens-site/background-cadastro.png"> -->
         <div class="box-cadastro">
             <h1>Crie sua conta</h1>
+            <div class="inputs">
+
+                <span> Digite seu nome:</span> <br>
+                <input type="text" placeholder="Nome" id="input_nome"> <input type="text" placeholder="Sobrenome"
+                    id="input_sobrenome">
+
+                <span> E-mail:</span> <br>
+                <input type="text" placeholder="email@email.com" id="input_email">
+
+                <span>Senha: </span> <span> Confirme sua senha: </span><br>
+                <input type="password" placeholder="Digite sua senha" id="input_senha">
+                <input type="password" placeholder="Confirme sua senha" id="input_confirmacao_senha"><br><br>
+            </div>
+
+            <div class="botao-cadastrar">
+                <button class="cadastrar" onclick="Cadastrar()">Cadastrar</button>
+            </div>
+
         </div>
 
     </section>
