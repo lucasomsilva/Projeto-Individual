@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Chinese Rocks';
+    src: url(/assets/fonts/chinese\ rocks\ rg.otf);
+}
+
+@font-face {
+    font-family: 'Montserrat Alternates';
+    src: url(/site/public/assets/fonts/MontserratAlternates-Light.ttf);
+}
+
+section {
+    display: flex;
+    border: solid wheat;
+    height: 725px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/site/public/assets/img/imagens-site/background-cadastro.png);
+}
+
+.box-cadastro {
+    background-color: black;
+    color: #EA4335;
+    font-family: 'Chinese Rocks', sans-serif;
+    width: 720px;
+    height: 616px;
+    font-size: 40px;
+    align-items: center;
+}
