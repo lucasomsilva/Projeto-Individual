@@ -20,7 +20,7 @@ section {
     background-size: 1550px;
 }
 
-.box-cadastro {
+.box-inputs {
     background-color: black;
     font-family: 'Chinese Rocks', sans-serif;
     margin-top: 60px;
@@ -32,7 +32,7 @@ section {
 h1 {
     text-align: center;
     font-size: 40px;
-    color: #7F1D1D;
+    color: #EA4335;
 }
 
 span {
@@ -57,18 +57,18 @@ input {
     width: 550px;
 }
 
-.botao-cadastrar {
+.botao {
     width: 100%;
     height: 50px;
     display: flex;
     justify-content: center;
 }
 
-.botao-cadastrar button {
+.botao button {
     width: 200px;
     height: 50px;    
     border-radius: 8px;
-    background-color: #7F1D1D;
+    background-color: #EA4335;
     color: white;
     font-family: 'Chinese Rocks', sans-serif;
     font-size: 20px;
@@ -77,8 +77,8 @@ input {
     box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.3);
 }
 
-.cadastrar:hover {
-    color: #7F1D1D;
+.button:hover {
+    color: #EA4335;
     background: white;
     box-shadow: none;
     cursor: pointer;

@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Chinese Rocks';
+    src: url(/assets/fonts/chinese\ rocks\ rg.otf);
+}
+
+@font-face {
+    font-family: 'Montserrat Alternates';
+    src: url(/site/public/assets/fonts/MontserratAlternates-Light.ttf);
+}
+
+section {
+    background-image: url(/site/public/assets/img/imagens-site/background-login.png);
+}
+
+input {
+    width: 91.5%;
+}
