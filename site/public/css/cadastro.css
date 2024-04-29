@@ -32,7 +32,7 @@ section {
 h1 {
     text-align: center;
     font-size: 40px;
-    color: #EA4335;
+    color: #7F1D1D;
 }
 
 span {
@@ -68,7 +68,7 @@ input {
     width: 200px;
     height: 50px;    
     border-radius: 8px;
-    background-color: #EA4335;
+    background-color: #7F1D1D;
     color: white;
     font-family: 'Chinese Rocks', sans-serif;
     font-size: 20px;
@@ -78,7 +78,7 @@ input {
 }
 
 .button:hover {
-    color: #EA4335;
+    color: #7F1D1D;
     background: white;
     box-shadow: none;
     cursor: pointer;
