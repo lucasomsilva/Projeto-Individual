@@ -172,7 +172,7 @@ li:hover::after {
     width: 160%;
     height: 1200px;
     right: -50px;
-    margin-top: -500px;
+    margin-top: -400px;
     z-index: -1;
 }
 
@@ -198,7 +198,7 @@ li:hover::after {
     transform: translate(-50%, -50%);
 }
 
-.banner button {
+/* .banner button {
     background-color: #334155;
     width: 137px;
     height: 48px;
@@ -216,7 +216,7 @@ li:hover::after {
     box-shadow: none;
     cursor: pointer;
     box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.3);
-}
+} */
 
 /* SOBRE O JOGO */
 
@@ -237,7 +237,7 @@ li:hover::after {
     width: 100%;
     font-family: 'Chinese Rocks', sans-serif;
     color: white;
-    font-size: 25px;
+    font-size: 28px;
 }
 
 .secao-1 {
@@ -291,7 +291,7 @@ li:hover::after {
     margin-top: 30px;
 }
 
-.sobre-o-jogo button {
+/* .sobre-o-jogo button {
     background-color: #334155;
     width: 240px;
     height: 50px;
@@ -301,6 +301,34 @@ li:hover::after {
     font-weight: 600;
     font-size: 16px;
     border: none;
+} */
+
+/* PREMIOS RECEBIDOS */
+
+.estatisticas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    background-color: #F8FAFC;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 40px;
+    justify-content: space-evenly;
 }
 
+.estatisticas p {
+    font-size: 40px;
+    color: #E2E8F0;
+    font-weight: 600;
+}
 
+/* CARROSSEL/GALERIA */
+
+.carossel {
+    border: #7F1D1D solid;
+    width: 500px;
+    height: 500px;
+}
