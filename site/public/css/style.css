@@ -29,8 +29,6 @@ body {
     border-radius: 50px;
 }
 
-
-
 /* HEADER */
 
 .header {
@@ -108,6 +106,15 @@ li:hover::after {
     width: 100%;
 }
 
+li a {
+    transition: 0.3s ease-in-out;
+}
+
+li a:hover {
+    color: #7F1D1D;
+    font-weight: bold;
+}
+
 .buton-header {
     display: flex;
     align-items: center;
@@ -145,7 +152,7 @@ li:hover::after {
 
 .login:hover {
     color: black;
-    background-color: white;
+    background-color: #E2E8F0;
     cursor: pointer;
     width: 70px;
     height: 120%;
@@ -154,7 +161,7 @@ li:hover::after {
 
 .cadastro:hover {
     color: black;
-    background-color: white;
+    background-color: #E2E8F0;
     cursor: pointer;
     width: 120px;
     height: 120%;
@@ -180,7 +187,7 @@ li:hover::after {
     color: white;
     font-family: 'Chinese Rocks', sans-serif;
     font-size: 40px;
-    z-index: 1; 
+    z-index: 1;
     bottom: 450px;
     left: 310px;
     transform: translate(-50%, -50%);
@@ -191,7 +198,7 @@ li:hover::after {
     color: white;
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 20px;
-    z-index: 1; 
+    z-index: 1;
     position: absolute;
     bottom: 350px;
     left: 350px;
@@ -325,10 +332,91 @@ li:hover::after {
     font-weight: 600;
 }
 
-/* CARROSSEL/GALERIA */
+/* PERSONAGENS */
 
-.carossel {
+.personagens {
+    border: goldenrod solid;
+    margin-top: 20%;
+    width: 100%;
+    height: 948px;
+}
+
+/* ODS - ONU */
+
+.box-ods {
+    margin-top: 20px;
+    background-color: #CDA572;
+    width: 100%;
+    height: 1294px;
+    display: flex;
+    flex-direction: column;
+}
+
+.traco {
+    background-color: black;
+    border-radius: 20px;
+    height: 5px;
+    display: flex;
+}
+
+.box-ods img {
+    width: 331px;
+    height: 310px;
+    border-radius: 23px;
+}
+
+.box-ods h1 {
+    font-family: 'Chinese Rocks', sans-serif;
+    color: #7F1D1D;
+    font-size: 201px;
+}
+
+.box-ods p {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 418px;
+}
+
+/* SOBRE MIM */
+
+.sobre-mim {
+    width: 100%;
+    height: 80%;
     border: #7F1D1D solid;
-    width: 500px;
-    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.sobre-mim p {
+    font-family: 'Montserrat Alternates',sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    color: white;
+}
+
+.cartaz-procurado {
+    height: 72%;
+    width: 27%;
+    margin-top: 25px;
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+    background-image: url(/site/public/assets/img/imagens-site/cartaz-procurado.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cartaz-procurado img {
+    width: 70%;
+    height: 48%;
+    margin-top: 40%;
 }
