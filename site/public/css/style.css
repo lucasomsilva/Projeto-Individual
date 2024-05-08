@@ -4,8 +4,8 @@
 }
 
 @font-face {
-    font-family: 'Montserrat Alternates';
-    src: url(/site/public/assets/fonts/MontserratAlternates-Light.ttf);
+    font-family: 'Hapna-Slab';
+    src: url(/site/public/assets/fonts/FontsFree-Net-Hapna-Slab-Serif.ttf);
 }
 
 ::selection {
@@ -39,7 +39,7 @@ body {
 
 .header {
     background-color: black;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Hapna-Slab', sans-serif;
     width: 100%;
     height: 64px;
     flex-direction: row;
@@ -132,7 +132,7 @@ li a:hover {
 .navbar .login {
     background-color: black;
     color: white;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Hapna-Slab', sans-serif;
     font-weight: bold;
     font-size: 14px;
 
@@ -146,7 +146,7 @@ li a:hover {
 .navbar .cadastro {
     background-color: #7F1D1D;
     color: white;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Hapna-Slab', sans-serif;
     font-weight: bold;
     font-size: 12px;
 
@@ -202,7 +202,7 @@ li a:hover {
 
 .banner h3 {
     color: white;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Hapna-Slab', sans-serif;
     font-size: 20px;
     z-index: 1;
     position: absolute;
@@ -217,7 +217,7 @@ li a:hover {
     height: 48px;
     border-radius: 8px;
     color: white;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Hapna-Slab ', sans-serif;
     font-weight: 600;
     border: none;
     transition: all 0.3s ease-in-out;
@@ -272,7 +272,7 @@ li a:hover {
 .secao-1 p {
     width: 563px;
     color: white;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Hapna-Slab', sans-serif;
     font-size: 23px;
     font-weight: 600;
     text-align: justify;
@@ -299,7 +299,7 @@ li a:hover {
 .secao-2 p {
     width: 563px;
     color: white;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Hapna-Slab', sans-serif;
     font-size: 20px;
     font-weight: 600;
     margin-top: 30px;
@@ -312,7 +312,7 @@ li a:hover {
     height: 50px;
     border-radius: 8px;
     color: white;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Hapna-Slab ', sans-serif;
     font-weight: 600;
     font-size: 16px;
     border: none;
@@ -327,7 +327,7 @@ li a:hover {
     width: 100%;
     height: 50%;
     background-color: #F8FAFC;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Hapna-Slab', sans-serif;
     font-size: 18px;
     font-weight: 600;
     margin-top: 40px;
@@ -353,18 +353,10 @@ li a:hover {
 
 .box-ods {
     margin-top: 20px;
-    background-color: #CDA572;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-}
-
-.traco {
-    background-color: black;
-    border-radius: 20px;
-    height: 5px;
-    display: flex;
 }
 
 .box-ods img {
@@ -375,20 +367,23 @@ li a:hover {
 
 .box-ods h1 {
     font-family: 'Chinese Rocks', sans-serif;
-    color: #7F1D1D;
+    color: #595959;
     font-size: 100px;
 }
 
 .box-ods p {
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Hapna-Slab', sans-serif;
+    color: #5A5A5A;
     font-size: 20px;
     font-weight: 600;
-    margin-top: -40px;
+    margin-top: -30px;
 }
 
 .box {
     display: flex;
+    background-image: url(/site/public/assets/img/imagens-site/background-onu.png);
     align-items: center;
+    padding: 10px;
     justify-content: space-evenly;
     width: 100%;
     height: 300px;
@@ -412,7 +407,7 @@ li a:hover {
 }
 
 .sobre-mim p {
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Hapna-Slab', sans-serif;
     font-size: 20px;
     margin-top: 150px;
     font-weight: 600;
@@ -443,7 +438,7 @@ li a:hover {
     width: 100wh;
     padding: 30px 0px;
     margin-top: 15px;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Hapna-Slab', sans-serif;
     text-align: center;
 }
 
