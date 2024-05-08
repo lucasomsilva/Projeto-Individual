@@ -8,6 +8,11 @@
     src: url(/site/public/assets/fonts/MontserratAlternates-Light.ttf);
 }
 
+::selection {
+    background-color: #7F1D1D;
+    color: white;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -27,6 +32,7 @@ body {
 ::-webkit-scrollbar-thumb {
     background-color: #7F1D1D;
     border-radius: 50px;
+    border: black 1px solid;
 }
 
 /* HEADER */
@@ -377,7 +383,7 @@ li a:hover {
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 20px;
     font-weight: 600;
-    text-align: justify;
+    margin-top: -40px;
 }
 
 .box {
@@ -388,28 +394,34 @@ li a:hover {
     height: 300px;
 }
 
+.paragrafo {
+    width: 50%;
+    height: 100px;
+    text-align: justify;
+}
+
 /* SOBRE MIM */
 
 .sobre-mim {
     width: 100%;
     height: 80%;
-    border: #7F1D1D solid;
     display: flex;
     justify-content: space-around;
-    flex-direction: row;
+    margin-top: 0px;
+    border: #7F1D1D solid;
 }
 
 .sobre-mim p {
-    font-family: 'Montserrat Alternates',sans-serif;
-    font-size: 23px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 20px;
+    margin-top: 150px;
     font-weight: 600;
     color: white;
 }
 
 .cartaz-procurado {
-    height: 72%;
-    width: 27%;
-    margin-top: 25px;
+    height: 415px;
+    width: 300px;
     margin: 25px;
     display: flex;
     justify-content: center;
@@ -419,7 +431,68 @@ li a:hover {
 }
 
 .cartaz-procurado img {
-    width: 70%;
-    height: 48%;
+    width: 72%;
+    height: 215px;
     margin-top: 40%;
+}
+
+/* FOOTER */
+
+.footer {
+    background: #7F1D1D;
+    width: 100wh;
+    padding: 30px 0px;
+    margin-top: 15px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-align: center;
+}
+
+.icons-footer {
+    width: 35px;
+    height: 35px;
+    fill: white;
+    transition: 0.2s ease-in-out;
+}
+
+.icons-footer:hover {
+    fill: black;
+}
+
+.footer .row {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    color: white;
+    font-size: 0.8em;
+    font-weight: 900;
+}
+
+.footer .row a {
+    text-decoration: none;
+    color: white;
+    transition: 0.2s ease-in-out;
+}
+
+.footer .row a:hover {
+    color: black;
+    font-weight: 900;
+}
+
+.footer .row ul {
+    width: 100%;
+}
+
+.footer .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+.footer .row a i {
+    font-size: 2em;
+    margin: 0% 1%;
+}
+
+.row::selection {
+    background-color: black;
+    color: white;
 }
