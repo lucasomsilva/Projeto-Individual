@@ -17,11 +17,12 @@ section {
     background-image: url(/site/public/assets/img/imagens-site/background-cadastro.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 1550px;
+    background-size: 1600px;
 }
 
 .box-inputs {
-    background-color: black;
+    background-color: rgba(0, 0, 0);
+    border-radius: 25px;
     font-family: 'Chinese Rocks', sans-serif;
     margin-top: 60px;
     width: 600px;
