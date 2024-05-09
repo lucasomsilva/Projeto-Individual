@@ -17,7 +17,7 @@ body {
     width: 20%;
     height: 100%;
     position: fixed;
-    background-color: aliceblue;
+    background-color: #E2E8F0;
     border-radius: 25px;
     display: flex;
     justify-content: center;
@@ -41,8 +41,25 @@ body {
 
 .topico {
     flex-direction: row;
-    justify-content: right;
     border: blue solid;
-    position: relative;
+    display: flex;
+    gap: 5px;
     align-items: center;
+}
+
+.card-personagem {
+    margin-left: 180%;
+    color: black;
+    background-color: #E2E8F0;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-family: 'Hapna-Slab', sans-serif;
+    height: 80%;
+    border-radius: 8px;
+}
+
+.card-personagem h2 {
+    font-weight: bold;
 }

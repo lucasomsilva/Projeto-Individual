@@ -14,14 +14,14 @@ section {
     width: 100%;
     justify-content: center;
     align-items: center;
-    background-image: url(/site/public/assets/img/imagens-site/background-cadastro.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/site/public/assets/img/imagens-site/teste.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 1600px;
+    background-size: cover;
 }
 
 .box-inputs {
-    background-color: rgba(0, 0, 0);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     border-radius: 25px;
     font-family: 'Chinese Rocks', sans-serif;
     margin-top: 60px;
@@ -84,4 +84,21 @@ input {
     box-shadow: none;
     cursor: pointer;
     box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.3);
+}
+
+.password {
+    display: flex;
+    flex-direction: row;
+    margin-top: -3%;
+}
+
+.senha {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.confirmacao {
+    display: flex;
+    flex-direction: column;
 }
