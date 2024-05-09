@@ -14,7 +14,7 @@ section {
     width: 100%;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/site/public/assets/img/imagens-site/teste.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/site/public/assets/img/imagens-site/background-cadastro.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -45,13 +45,16 @@ span {
 
 input {
     margin: 15px;
-    margin-top: -2px;
+    margin-top: 5px;
     width: 255px;
     height: 40px;
     border-radius: 8px;
     text-align: center;
     font-size: 15px;
     font-family: 'Chinese Rocks', sans-serif;
+    outline: 3px solid #7F1D1D;
+    border: none;
+    transition: 0.25s;
 }
 
 #input_email {
@@ -67,7 +70,7 @@ input {
 
 .botao button {
     width: 200px;
-    height: 50px;    
+    height: 50px;
     border-radius: 8px;
     background-color: #7F1D1D;
     color: white;
