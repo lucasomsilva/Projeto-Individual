@@ -4,6 +4,45 @@
 }
 
 @font-face {
-    font-family: 'Hapna-Slab ';
+    font-family: 'Hapna-Slab';
     src: url(/site/public/assets/fonts/Hapna-Slab-Light.ttf);
+}
+
+body {
+    background-color: #0F172A;
+    display: flex;
+}
+
+.menu {
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    background-color: aliceblue;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Hapna-Slab', sans-serif;
+    font-weight: 900;
+    flex-direction: column;
+}
+
+.menu h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.secoes {
+    width: 100%;
+    height: 50%;
+    margin-top: 30%;
+    border: black solid;
+    justify-content: center;
+}
+
+.topico {
+    flex-direction: row;
+    justify-content: right;
+    border: blue solid;
+    position: relative;
+    align-items: center;
 }
