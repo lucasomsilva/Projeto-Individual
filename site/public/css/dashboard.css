@@ -8,10 +8,18 @@
     src: url(/site/public/assets/fonts/Hapna-Slab-Light.ttf);
 }
 
+::selection {
+    background-color: #0F172A;
+    color: white;
+}
+
+
 body {
     background-color: #0F172A;
     display: flex;
 }
+
+/* MENU */
 
 .menu {
     width: 20%;
@@ -41,19 +49,33 @@ body {
 .topico {
     flex-direction: row;
     display: flex;
+    width: 80%;
     gap: 5px;
-    margin-left: 50px;
+    margin-left: 20px;
     align-items: center;
+    background-color:#0F172A;
+    color: #E2E8F0;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
 }
 
+.topico:hover {
+    background-color: #7F1D1D;
+    color: #E2E8F0;
+    cursor: pointer;
+}
+
+/* PERSONAGEM PREFERIDO */
+
 .card-personagem {
-    margin-left: 180%;
+    margin-left: 220%;
     color: black;
     background-color: #E2E8F0;
     flex-direction: row;
     display: flex;
     align-items: center;
-    width: 100%;
+    margin-top: 5px;
+    width: 130%;
     font-family: 'Hapna-Slab', sans-serif;
     border-radius: 8px;
 }
@@ -62,10 +84,46 @@ body {
     font-weight: bold;
 }
 
+/* GRÁFICO DE VENDAS */
+
+.graficos {
+    height: 100%;
+    border: red solid;
+    display: flex;
+    align-items: center;
+}
+
 .vendas {
     display: flex;
     width: 100%;
     margin-top: 200px;
     border: #E2E8F0 solid;
-    height: 300px;
+    height: 400px;
+    flex-direction: column
+}
+
+.indicadores {
+    height: 70%;
+    width: 30%;
+    border: green solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    border: blue solid;
+    width: 98%;
+    height: 30%;
+    font-family: 'Hapna-Slab', sans-serif;
+    background-color: #E2E8F0;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.card h2 {
+    font-size: 19px;
 }

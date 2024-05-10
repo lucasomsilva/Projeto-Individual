@@ -18,10 +18,10 @@
 
         <div class="secoes">
             <div class="topico">
-                <img class="imagens" src="assets/img/imagens-site/adicionar.svg">
+                <img class="imagens" src="assets/img/imagens-site/adicao.svg">
                 <p>Adicionar personagem</p>
             </div>
-
+            <br>
             <div class="topico">
                 <img class="imagens" src="assets/img/imagens-site/hora.svg">
                 <p>Inserir tempo de jogo</p>
@@ -43,16 +43,43 @@
     </section>
 
     <section class="vendas">
+        
         <div class="titulos">
             <h1>Vendas de cópias por ano</h1>
         </div>
 
-        <div class="grafico">
+        <div class="graficos">
+            <div class="indicadores">
+                <div class="card">
+                    <img class="imagens" src="assets/img/imagens-site/bom.png">
+                    <h2>Ano que mais vendeu cópias</h2>
+                    <p>2018</p>
+                </div>
 
+                <div class="card">
+                    <img class="imagens" src="assets/img/imagens-site/ruim.png">
+                    <h2>Ano que menos vendeu cópias</h2>
+                    <p>2024</p>
+                </div>
+
+                <div class="card">
+                    <img class="imagens" src="assets/img/imagens-site/dinheiro.png">
+                    <h2>Vendas totais</h2>
+                    <p>R$ 1.000.000,00</p>
+                </div>
+
+            </div>
+
+            <canvas id="grafico1" style="position: relative; height: 40vh; width: 40vw;"></canvas>
+            
         </div>
 
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
 </body>
 
 </html>
+
+<script src="js/dashboard.js"></script>
