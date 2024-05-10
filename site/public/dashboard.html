@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="shortcut icon" type="image/jpg" href="/site/public/assets/favicon/favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -43,7 +44,7 @@
     </section>
 
     <section class="vendas">
-        
+
         <div class="titulos">
             <h1>Vendas de cópias por ano</h1>
         </div>
@@ -70,14 +71,26 @@
 
             </div>
 
-            <canvas id="grafico1" style="position: relative; height: 40vh; width: 40vw;"></canvas>
-            
+            <div class="grafico1">
+                <canvas id="grafico1" style="position: relative; height: 40vh; width: 40vw;"></canvas>
+            </div>
+
+        </div>
+
+    </section>
+    
+    <section class="interacoes">
+        
+        <div class="titulos">
+            <h1>Interações com NPC</h1>
+        </div>
+
+        <div class="grafico2">
+            <canvas id="grafico2" style="position: relative; height: 10vh; width: 10vw;"></canvas>
         </div>
 
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
 </body>
 
 </html>

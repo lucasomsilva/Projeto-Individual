@@ -15,8 +15,9 @@
 
 
 body {
-    background-color: #0F172A;
+    background-color: #4A0000;
     display: flex;
+    flex-direction: column;
 }
 
 /* MENU */
@@ -25,8 +26,8 @@ body {
     width: 20%;
     height: 100%;
     position: fixed;
-    background-color: #E2E8F0;
-    border-radius: 25px;
+    background-color: black;
+    border-radius: 0 20px 20px 0;
     display: flex;
     justify-content: center;
     font-family: 'Hapna-Slab', sans-serif;
@@ -36,6 +37,9 @@ body {
 
 .menu h1 {
     text-align: center;
+    font-family: 'Chinese Rocks', sans-serif;
+    color: white;
+    font-size: 40px;
     font-weight: bold;
 }
 
@@ -53,7 +57,7 @@ body {
     gap: 5px;
     margin-left: 20px;
     align-items: center;
-    background-color:#0F172A;
+    background-color: #4A0000;
     color: #E2E8F0;
     border-radius: 8px;
     transition: all 0.2s ease-in-out;
@@ -68,14 +72,14 @@ body {
 /* PERSONAGEM PREFERIDO */
 
 .card-personagem {
-    margin-left: 220%;
+    margin-left: 43%;
     color: black;
     background-color: #E2E8F0;
     flex-direction: row;
     display: flex;
     align-items: center;
     margin-top: 5px;
-    width: 130%;
+    width: 28%;
     font-family: 'Hapna-Slab', sans-serif;
     border-radius: 8px;
 }
@@ -86,33 +90,37 @@ body {
 
 /* GRÁFICO DE VENDAS */
 
-.graficos {
-    height: 100%;
-    border: red solid;
-    display: flex;
-    align-items: center;
+.titulos {
+    margin-left: -130px;
 }
 
 .vendas {
     display: flex;
     width: 100%;
     margin-top: 200px;
-    border: #E2E8F0 solid;
     height: 400px;
-    flex-direction: column
+    flex-direction: column;
+    margin-left: 14%;
+}
+
+.graficos {
+    height: 80%;
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .indicadores {
     height: 70%;
     width: 30%;
-    border: green solid;
     display: flex;
     flex-direction: column;
+    text-align: center;
     align-items: center;
 }
 
 .card {
-    border: blue solid;
     width: 98%;
     height: 30%;
     font-family: 'Hapna-Slab', sans-serif;
@@ -126,4 +134,29 @@ body {
 
 .card h2 {
     font-size: 19px;
+}
+
+.grafico1 {
+    background-color: #E2E8F0;
+    height: 93%;
+    width: 43%;
+    border-radius: 12px;
+}
+
+/* GRAFICO DE NPC */
+
+.interacoes {
+    border: #E2E8F0 solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.grafico2 {
+    background-color: #E2E8F0;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    width:30%;
+    margin-left: 50%;
+    border-radius: 12px;
 }
