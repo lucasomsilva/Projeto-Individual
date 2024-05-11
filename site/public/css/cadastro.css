@@ -3,7 +3,7 @@
     src: url(/assets/fonts/chinese\ rocks\ rg.otf);
 }
 
-@font-face {
+ @font-face {
     font-family: 'Hapna-Slab ';
     src: url(/site/public/assets/fonts/Hapna-Slab-Light.ttf);
 }
@@ -104,4 +104,28 @@ input {
 .confirmacao {
     display: flex;
     flex-direction: column;
+}
+
+.alerta_erro {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.card_erro {
+    display: none;
+    background-color: #fff;
+    color: black;
+    width: 230px;
+    position: fixed;
+    border-radius: 4px;
+    border: #7F1D1D 3px solid;
+    padding: 10px;
+    margin-left: 30%;
+    margin-bottom: 40%;
+}
+
+.card_erro #mensagem_erro {
+    font-weight: 500;
+    font-size: 20px;
+    color: black;
 }

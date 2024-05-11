@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cadastro.css">
     <link rel="shortcut icon" type="image/jpg" href="/site/public/assets/favicon/favicon.ico" />
+    <script src="js/cadastro.js"></script>
 </head>
 
 <body>
@@ -46,6 +47,12 @@
         </div>
     </header>
 
+    <div class="alerta_erro">
+        <div class="card_erro" id="cardErro">
+            <span id="mensagem_erro"></span>
+        </div>
+    </div>
+
     <section>
         <div class="box-inputs">
             <h1>Crie sua conta</h1>
@@ -65,13 +72,13 @@
                     </div>
                     <div class="inputs confirmacao">
                         <span> Confirme sua senha: </span>
-                        <input type="password" placeholder="Confirme sua senha" id="input_confirmacao_senha">
+                        <input type="password" placeholder="Confirme sua senha" id="input_confirmacaoSenha">
                     </div>
                 </div>
             </div>
 
             <div class="botao">
-                <button class="button" onclick="Cadastrar()">Cadastrar</button>
+                <button class="button" onclick="cadastrar()">Cadastrar</button>
             </div>
 
         </div>
