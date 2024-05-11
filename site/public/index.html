@@ -51,9 +51,10 @@
         <div class="texto-banner">
             <h1>Faça parte da gangue Van Der Linde</h1>
             <h3>Tudo sobre Red Dead Redemption 2, veja personagens <br>
-                e suas características, curiosidades e muito mais! 
+                e suas características, curiosidades e muito mais!
                 <br>
-                Tenha acesso a sua própria Dashboard, ao realizar o cadastro</h3>
+                Tenha acesso a sua própria Dashboard, ao realizar o cadastro
+            </h3>
         </div>
     </section>
 
@@ -116,42 +117,86 @@
 
     <section class="personagens" id="personagens">
         <br><br><br>
+
         <div class="titulos">
             <img src="assets/img/imagens-site/low-honor.png" style="height: 50px; width: 50px;">
             <h1>PERSONAGENS</h1>
         </div>
 
-        HTML 
+        <div class="carousel" id="personagem">
 
-<div class="carousel" id="carros">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
 
-      <button class="prev" onclick="prevSlide()">&#10094;</button>
-      <div class="carousel-content">
-	  
-        <div class="slide">
-          <article>
-            <h1>Muscle Cars</h1>
-            <p>Carros potentes com muita cavalaria em seu motor, e um ronco forte e barulhento, mostra que está
-              chegando, e chega rápido.</p>
-            <button onclick="alert('Botão do Slide 1 clicado')">Saiba Mais</button>
-          </article>
-          <img src="./assets/img/imagens-carrossel/img-1.png" alt="Imagem 1">
+            <div class="carousel-content">
+
+                <div class="slide">
+                    <article>
+                        <h1 style="color: white;">Arthur Morgan</h1>
+                        <p style="color: white;">É retratado como um homem de princípios, apesar de viver como fora-da-lei. Ele é leal à gangue de Dutch van der Linde, agindo como um dos membros mais confiáveis e próximos do líder. Arthur é conhecido por sua sabedoria, sendo muitas vezes o conselheiro de Dutch.</p>
+                    </article>
+                    <img src="./assets/img/personagens/arthur.png" alt="Imagem 1">
+                </div>
+
+                <div class="slide">
+                    <article>
+                        <h1 style="color: white;">Jhon Marston</h1>
+                        <p style="color: white;"> John Marston é um homem de princípios fortes e um senso de moralidade definido. Muito leal aos seus amigos e à sua família, faz o que for necessário para protegê-los e ajudá-los. Não costuma se envolver em debates filosóficos ou introspecções profundas.</p>
+                    </article>
+                    <img src="./assets/img/personagens/jhon.png" alt="Imagem 2">
+                </div>
+
+                <div class="slide">
+                    <article>
+                        <h1 style="color: white;">Dutch Van Der Linde</h1>
+                        <p style="color: white;">Dutch é inteligente e eloquente, inspirando lealdade em sua gangue. Ele é visto como um líder visionário, buscando viver fora das normas da sociedade. Porém, ao longo do jogo, sua personalidade se deteriora, tornando-se mais paranóico e desconfiado.</p>
+                    </article>
+                    <img src="./assets/img/personagens/dutch.jpg" alt="Imagem 3">
+                </div>
+
+                <div class="slide">
+                    <article>
+                        <h1 style="color: white;">Micah Bell</h1>
+                        <p style="color: white;">Sendo o antagonista, Micah é descrito como alguém extremamente egocêntrico, violento e manipulador. Frequentemente instiga conflitos dentro da gangue, muitas vezes colocando os outros membros em situações perigosas para benefício próprio.</p>
+                    </article>
+                    <img src="./assets/img/personagens/micah.png" alt="Imagem 4">
+                </div>
+
+                <div class="slide">
+                    <article>
+                        <h1 style="color: white;">Hosea Matthews</h1>
+                        <p style="color: white;">Hosea é um homem sábio e carismático. Ele atua como conselheiro e voz da razão na gangue, muitas vezes contrapondo Dutch van der Linde. Sua habilidade em negociar ajuda a gangue a encontrar soluções para seus problemas.</p>
+                    </article>
+                    <img src="./assets/img/personagens/hosea.png" alt="Imagem 5">
+                </div>
+
+                <div class="slide">
+                    <article>
+                        <h1 style="color: white;">Lenny Summers</h1>
+                        <p style="color: white;">Lenny Summers é um dos membros mais jovens e entusiasmados da gangue, frequentemente visto como alguém que traz um senso de humor e leveza para a gangue, mesmo em momentos difíceis.</p>
+                    </article>
+                    <img src="./assets/img/personagens/lenny.jpg" alt="Imagem 7">
+                </div>
+
+                <div class="slide">
+                    <article>
+                        <h1 style="color: white;">Sadie Adler</h1>
+                        <p style="color: white;">Ao longo da história, Sadie passa por um arco de desenvolvimento significativo. Ela começa como alguém vulnerável e traumatizada, mas ao longo do tempo, se torna uma das personagens mais fortes e independentes do jogo.</p>
+                    </article>
+                    <img src="./assets/img/personagens/sadie.png" alt="Imagem 8">
+                </div>
+
+                <div class="slide">
+                    <article>
+                        <h1 style="color: white;">Javier Escuella</h1>
+                        <p style="color: white;">Javier tem um forte senso de honra e lealdade com seus companheiros de gangue, especialmente Dutch van der Linde, a quem ele segue fielmente. Ele é habilidoso no uso de armas e montaria, sendo um dos membros mais confiáveis da gangue em termos de habilidades de combate.</p>
+                    </article>
+                    <img src="./assets/img/personagens/javier.png" alt="Imagem 9">
+                </div>
+
+                <!-- Adicione mais slides conforme necessário -->
+            </div>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
         </div>
-        
-        <div class="slide">
-          <article>
-            <h1>Carros Elétricos</h1>
-            <p>Futuro do automobilismo, carros eficientes e rápidos. Cheios de tecnologia de última geração e economia
-              gigantesca.</p>
-            <button onclick="alert('Botão do Slide 1 clicado')">Saiba Mais</button>
-          </article>
-          <img src="./assets/imgs/img-carros/img-carro06.png" alt="Imagem 1">
-        </div>
-		
-        <!-- Adicione mais slides conforme necessário -->
-      </div>
-      <button class="next" onclick="nextSlide()">&#10095;</button>
-    </div>
 
     </section>
 
