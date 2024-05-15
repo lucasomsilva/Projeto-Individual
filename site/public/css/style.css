@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Chinese Rocks';
-    src: url(/assets/fonts/chinese\ rocks\ rg.otf);
+    src: url(../assets/fonts/chinese\ rocks\ rg.otf);
 }
 
 @font-face {
     font-family: 'Hapna-Slab';
-    src: url(/site/public/assets/fonts/FontsFree-Net-Hapna-Slab-Serif.ttf);
+    src: url(../assets/fonts/FontsFree-Net-Hapna-Slab-Serif.ttf);
 }
 
 ::selection {
@@ -347,7 +347,7 @@ li a:hover {
 .slide article p {
     margin: 0;
     font-size: 24px;
-    color: var(--GavaWhite);
+    color: white;
 }
 
 .slide article button {
@@ -477,7 +477,7 @@ li a:hover {
 
 .box {
     display: flex;
-    background-image: url(/site/public/assets/img/imagens-site/background-onu.png);
+    background-image: url(../assets/img/imagens-site/background-onu.png);
     align-items: center;
     padding: 10px;
     justify-content: space-evenly;
@@ -515,7 +515,7 @@ li a:hover {
     margin: 25px;
     display: flex;
     justify-content: center;
-    background-image: url(/site/public/assets/img/imagens-site/cartaz-procurado.png);
+    background-image: url(../assets/img/imagens-site/cartaz-procurado.png);
     background-repeat: no-repeat;
     background-size: cover;
 }

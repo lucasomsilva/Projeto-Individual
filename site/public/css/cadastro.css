@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Chinese Rocks';
-    src: url(/assets/fonts/chinese\ rocks\ rg.otf);
+    src: url(../assets/fonts/chinese\ rocks\ rg.otf);
 }
 
  @font-face {
     font-family: 'Hapna-Slab';
-    src: url(/site/public/assets/fonts/Hapna-Slab-Light.ttf);
+    src: url(../assets/fonts/FontsFree-Net-Hapna-Slab-Serif.ttf);
 }
 
 section {
