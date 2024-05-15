@@ -319,7 +319,7 @@ li a:hover {
 .slide {
     width: 100vw;
     height: 60vh;
-    background-color: lightcoral;
+    background-color: transparent;
 
     display: flex;
     justify-content: center;
@@ -342,12 +342,14 @@ li a:hover {
     margin: 0;
     font-size: 56px;
     color: white;
+    font-family: 'Chinese Rocks', sans-serif;
 }
 
 .slide article p {
     margin: 0;
     font-size: 24px;
     color: white;
+    font-family: 'Hapna-Slab', sans-serif;
 }
 
 .slide article button {
