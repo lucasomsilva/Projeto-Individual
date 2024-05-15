@@ -4,12 +4,12 @@
 }
 
 @font-face {
-    font-family: 'Hapna-Slab ';
+    font-family: 'Hapna-Slab';
     src: url(/site/public/assets/fonts/Hapna-Slab-Light.ttf);
 }
 
 section {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/site/public/assets/img/imagens-site/background-login.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/img/imagens-site/background-login.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
