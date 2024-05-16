@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/cadastro.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="shortcut icon" type="image/jpg" href="../public/assets/favicon/favicon.ico" />
+    <script src="js/login.js"></script>
 </head>
 
 <body>
@@ -40,13 +41,20 @@
                 </li>
                 <div class="buton-header">
                     <p>|</p>
-                    <a href="cadastro.html"> <button class="cadastro">Cadastre-se</button> </a>
+                    <a href="cadastro.html"><button class="cadastro">Cadastre-se</button> </a>
                 </div>
             </ul>
         </div>
     </header>
 
+    <div class="alerta_erro">
+        <div class="card_erro" id="cardErro">
+            <span id="mensagem_erro"></span>
+        </div>
+    </div>
+
     <section>
+
         <div class="box-inputs">
             <h1>FAÇA LOGIN</h1>
             <div class="inputs">
@@ -60,7 +68,7 @@
             </div>
 
             <div class="botao">
-                <button class="button" onclick="Entrar()">Entrar</button>
+                <button class="button" onclick="entrar()">Entrar</button>
             </div>
 
         </div>

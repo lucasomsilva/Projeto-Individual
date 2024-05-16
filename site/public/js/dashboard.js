@@ -1,3 +1,7 @@
+var idUsuario = sessionStorage.ID_USUARIO;
+var nome = sessionStorage.NOME_USUARIO;
+titulo.innerHTML = `Bem vindo(a) ${nome}`
+
 const grafico1 = document.getElementById('grafico1');
 const grafico2 = document.getElementById('grafico2');
 
