@@ -9,8 +9,6 @@ var app = express();
 
 var indexRouter = require("./src/routes/index")
 var usuarioRouter = require("./src/routes/usuario");
-// var loginRouter = require("./src/routes/login");
-// var livroRouter = require("./src/routes/livro");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -21,7 +19,6 @@ app.use('/', indexRouter);
 
 app.use("/usuario", usuarioRouter);
 // app.use("/login", loginRouter);
-// app.use("/livro", livroRouter);
 
 app.listen(PORTA, function () {
     console.log(`Servidor do seu site já está rodando! Acesse o caminho a seguir para visualizar: http://localhost:${PORTA} \n

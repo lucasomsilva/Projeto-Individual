@@ -1,5 +1,4 @@
 function cadastrar() {
-    // aguardar();
 
     var nomeVar = input_nome.value;
     var sobrenomeVar = input_sobrenome.value;
@@ -19,7 +18,6 @@ function cadastrar() {
         mensagem_erro.innerHTML =
             "Todos os campos precisam estar preenchidos";
 
-        // finalizarAguardar();
         return false;
     } else if (senhaVar != confirmacaoSenhaVar) {
         cardErro.style.display = "block";
@@ -27,7 +25,6 @@ function cadastrar() {
         mensagem_erro.innerHTML =
             "As senhas são diferentes!";
 
-        // finalizarAguardar();
         return false;
     } else if (emailVar.indexOf('@') < 0 || emailVar.indexOf('.') < 0) {
         cardErro.style.display = "block";
@@ -35,7 +32,6 @@ function cadastrar() {
         mensagem_erro.innerHTML =
             "Insira um e-mail válido!";
 
-        // finalizarAguardar();
         return false;
     }
     else {
