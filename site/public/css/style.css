@@ -350,12 +350,12 @@ li a:hover {
     font-size: 24px;
     color: white;
     font-family: 'Hapna-Slab', sans-serif;
+    text-align: justify;
 }
 
 .slide article button {
     margin-top: 1em;
     background-color: white;
-    color: lightcoral;
     width: 10em;
     height: 2em;
     border: none;
@@ -367,7 +367,6 @@ li a:hover {
 }
 
 .slide article button:hover {
-    background-color: purple;
     color: white;
     cursor: pointer;
 }
@@ -384,8 +383,6 @@ li a:hover {
     border: none;
     margin: 3em;
 }
-
-
 
 .carousel {
     position: relative;
@@ -437,7 +434,6 @@ li a:hover {
     display: inline-block;
     width: 10px;
     height: 10px;
-    background-color: purple;
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
