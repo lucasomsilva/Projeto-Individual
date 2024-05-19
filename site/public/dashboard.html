@@ -18,15 +18,15 @@
         <h1 id="titulo">Bem vindo(a) Júlia</h1>
 
         <div class="secoes">
-            <div class="topico">
+            <button onclick="abrirModalPersonagem()">
                 <img class="imagens" src="assets/img/imagens-site/adicao.svg">
                 <p>Adicionar personagem</p>
-            </div>
+            </button>
             <br>
-            <div class="topico">
-                <img class="imagens" src="assets/img/imagens-site/hora.svg">
-                <p>Inserir tempo de jogo</p>
-            </div>
+            <button>
+                <img class="imagens" src="assets/img/imagens-site/interrogacao.png">
+                <p>Quiz sobre Red Dead</p>
+            </button>
         </div>
 
         <div class="botao">
@@ -101,6 +101,27 @@
 
     </section>
 
+    <section class="janela-modal" id="janela-modal">
+        <div class="modal">
+            <button class="fechar" id="fechar">&times;</button>
+            <h1 class="titulos">Você sabe tudo sobre Red Dead?</h1>
+            <select id="select_personagens">
+                <option value="#">Selecione um personagem</option>
+                <option value="arthur">Arthur Morgan</option>
+                <option value="jhon">Jhon Marston</option>
+                <option value="dutch">Dutch van Der Linde</option>
+                <option value="micah">Micah Bell</option>
+                <option value="hosea">Hosea Mattews</option>
+                <option value="lenny">Lenny Summmers</option>
+                <option value="sadie">Sadie Adler</option>
+                <option value="javier">Javier Escuella</option>
+                <option value="bill">Bil Williamson</option>
+                <option value="uncle">Uncle</option>
+                <option value="charles">Charles Smith</option>
+            </select>
+        </div>
+    </section>
+    
 </body>
 
 </html>
