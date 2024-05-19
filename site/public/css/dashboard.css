@@ -101,7 +101,7 @@ body {
     box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.3);
 }
 
-/* MODAL QUIZ */
+/* MODAL PERSONAGEM */
 
 .janela-modal {
     width: 100vw;
@@ -118,6 +118,7 @@ body {
 
 .modal .titulos {
     color: black;
+    margin-left: 2%;
 }
 
 .modal {
@@ -129,6 +130,7 @@ body {
     padding: 50px;
     border-radius: 20px;
     align-items: center;
+    justify-content: center;
 }
 
 .fechar {
@@ -164,6 +166,27 @@ body {
 
 .abrir .modal {
     animation: abrirModal 0.5s;
+}
+
+.box-personagem {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border: #7F1D1D solid;
+}
+
+.modal select {
+    background-color: black;
+    color: white;
+    width: 50%;
+    height: 50px;
+    border-radius: 12px;
+    text-align: center;
+    font-family: 'Hapna-Slab', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 /* PERSONAGEM PREFERIDO */
