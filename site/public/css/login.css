@@ -17,3 +17,7 @@ section {
 input {
     width: 91.5%;
 }
+
+.card-inputs {
+    width: 50%;
+}

@@ -51,7 +51,7 @@ function entrar() {
                 resposta.text().then(texto => {
                     console.error(texto);
                     cardErro.style.display = "block"
-                    mensagem_erro.innerHTML = "(Houve um erro ao tentar realizar o login)";
+                    mensagem_erro.innerHTML = "Houve um erro ao tentar realizar o login";
 
                     return false;
                 });
