@@ -4,6 +4,7 @@ titulo.innerHTML = `Bem vindo(a) ${nome}`
 
 const grafico1 = document.getElementById('grafico1');
 const grafico2 = document.getElementById('grafico2');
+const grafico3 = document.getElementById('grafico3');
 
 new Chart(grafico1, {
     type: 'line',
@@ -24,10 +25,24 @@ new Chart(grafico2, {
         labels: ['Saudações', 'Conversar', 'Roubo', 'Hostilizar'],
         datasets: [{
             label: 'Em %',
-            backgroundColor: ['#E19494', 
-            '#A14A4A', 
-            '#831919', 
-            '#4F0F0F'],
+            backgroundColor: ['#E19494',
+                '#A14A4A',
+                '#831919',
+                '#4F0F0F'],
+            data: [40, 30, 15, 15],
+        }],
+    },
+});
+
+new Chart(grafico3, {
+    type: 'pie',
+    data: {
+        labels: ['Arthur', 'Jhon', 'Micah', 'Dutch'],
+        datasets: [{
+            backgroundColor: ['#E19494',
+                '#A14A4A',
+                '#831919',
+                '#4F0F0F'],
             data: [40, 30, 15, 15],
         }],
     },

@@ -101,15 +101,23 @@ body {
 
 /* PERSONAGEM PREFERIDO */
 
+.personagem-preferido {
+    height: 250px;
+    border: #E2E8F0 solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 20%;
+}
+
 .card-personagem {
-    margin-left: 43%;
     color: black;
     background-color: #E2E8F0;
     flex-direction: row;
     display: flex;
     align-items: center;
-    margin-top: 5px;
     width: 28%;
+    height: 70%;
     font-family: 'Hapna-Slab', sans-serif;
     border-radius: 8px;
 }
@@ -117,6 +125,17 @@ body {
 .card-personagem h2 {
     font-weight: bold;
 }
+
+.personagem-mais-escolhido {
+    
+}
+
+/* .grafico3 {
+    background-color: #E2E8F0;
+    border-radius: 12px;
+    width: 500px;
+    height: 100%;
+} */
 
 /* GRÁFICO DE VENDAS */
 
