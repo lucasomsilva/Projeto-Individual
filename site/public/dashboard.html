@@ -23,7 +23,7 @@
                 <p>Adicionar personagem</p>
             </button>
             <br>
-            <button>
+            <button onclick="abrirModalQuiz()">
                 <img class="imagens" src="assets/img/imagens-site/interrogacao.png">
                 <p>Quiz sobre Red Dead</p>
             </button>
@@ -38,18 +38,15 @@
     <section class="personagem-preferido">
         <div class="card-personagem">
             <img src="assets/img/imagens-site/estrela.png">
-            <h2>Personagem preferido</h2>
-            <p>Arthur Morgan</p>
+            <div class="texto-personagem-preferido">
+                <h2>Personagem preferido</h2>
+                <p>Arthur Morgan</p>
+            </div>
         </div>
 
-        <div class="card-personagem personagem-mais-escolhido">
-            <h2>Personagem mais escolhido</h2>
-            <p>Dutch Van Der Linde</p>
-        </div>
-
-        <!-- <div class="grafico3">
+        <div class="grafico3">
             <canvas id="grafico3" style="position: relative; height: 40vh; width: 40vw;"></canvas>
-        </div> -->
+        </div>
 
     </section>
 
@@ -120,6 +117,35 @@
                     <option value="uncle">Uncle</option>
                     <option value="charles">Charles Smith</option>
                 </select>
+            </div>
+            <div class="botao">
+                <button class="button" onclick="registrarPersonagem()">Registrar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="janela-modal" id="janela-modal">
+        <div class="modal">
+            <button class="fechar" id="fechar">&times;</button>
+            <div class="box-personagem">
+                <h1 class="titulos">Escolha seu personagem preferido</h1>
+                <select id="select_personagens">
+                    <option value="#">Selecione um personagem</option>
+                    <option value="arthur">Arthur Morgan</option>
+                    <option value="jhon">Jhon Marston</option>
+                    <option value="dutch">Dutch van Der Linde</option>
+                    <option value="micah">Micah Bell</option>
+                    <option value="hosea">Hosea Mattews</option>
+                    <option value="lenny">Lenny Summmers</option>
+                    <option value="sadie">Sadie Adler</option>
+                    <option value="javier">Javier Escuella</option>
+                    <option value="bill">Bil Williamson</option>
+                    <option value="uncle">Uncle</option>
+                    <option value="charles">Charles Smith</option>
+                </select>
+            </div>
+            <div class="botao">
+                <button class="button" onclick="registrarPersonagem()">Registrar</button>
             </div>
         </div>
     </section>
