@@ -15,7 +15,7 @@
 
     <section class="menu">
 
-        <h1 id="titulo">Bem vindo(a) Júlia</h1>
+        <h1 id="titulo">Bem vindo(a) ${nome}</h1>
 
         <div class="secoes">
             <button onclick="abrirModalPersonagem()">
@@ -38,8 +38,16 @@
     <section class="personagem-preferido">
         <div class="card-personagem">
             <img src="assets/img/imagens-site/estrela.png">
-            <div class="texto-personagem-preferido">
+            <div class="texto-card">
                 <h2>Personagem preferido</h2>
+                <p>Arthur Morgan</p>
+            </div>
+        </div>
+
+        <div class="card-personagem">
+            <img src="assets/img/imagens-site/mais.png">
+            <div class="texto-card">
+                <h2>Personagem mais escolhido</h2>
                 <p>Arthur Morgan</p>
             </div>
         </div>
@@ -48,32 +56,44 @@
             <canvas id="grafico3" style="position: relative; height: 40vh; width: 40vw;"></canvas>
         </div>
 
+
     </section>
+
+    <div class="descricao-personagem" id="div_descricao">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        Dolorum fuga consequatur explicabo, ad odio recusandae maxime alias, ducimus voluptas quasi labore eaque facere
+        cumque doloremque cupiditate ex et blanditiis officiis!
+    </div>
 
     <section class="vendas">
 
         <div class="titulos">
-            <h1>Vendas de cópias por ano</h1>
+            <h1>Horas jogadas por mês </h1>
         </div>
 
         <div class="graficos">
             <div class="indicadores">
                 <div class="card">
                     <img class="imagens" src="assets/img/imagens-site/bom.png">
-                    <h2>Ano que mais vendeu cópias</h2>
-                    <p>2018</p>
+                    <div id="texto-card-horas">
+                        <h2>Mês que mais jogou</h2>
+                        <p>Janeiro</p>
+                    </div>
                 </div>
 
                 <div class="card">
                     <img class="imagens" src="assets/img/imagens-site/ruim.png">
-                    <h2>Ano que menos vendeu cópias</h2>
-                    <p>2024</p>
+                    <div id="texto-card-horas">
+                        <h2>Mês que menos jogou</h2>
+                        <p>Maio</p>
+                    </div>
                 </div>
 
                 <div class="card">
-                    <img class="imagens" src="assets/img/imagens-site/dinheiro.png">
-                    <h2>Vendas totais</h2>
-                    <p>R$ 1.000.000,00</p>
+                    <img class="imagens" src="assets/img/imagens-site/hora.png">
+                    <div id="texto-card-horas">
+                        <h2>Médias de horas por mês</h2>
+                        <p>5 horas</p>
+                    </div>
                 </div>
 
             </div>
