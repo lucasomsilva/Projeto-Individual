@@ -1,7 +1,6 @@
 var mysql = require("mysql2");
 var sql = require('mssql');
 
-// CONEXÃO DO MYSQL WORKBENCH
 var mySqlConfig = {
     host: "localhost",
     database: "projeto_individual",
@@ -10,7 +9,6 @@ var mySqlConfig = {
 };
 
 function executar(instrucao) {
-    // VERIFICA A VARIÁVEL DE AMBIENTE SETADA EM app.js
     if (process.env.AMBIENTE_PROCESSO == "producao") {
         return new Promise(function (resolve, reject) {
             sql.connect(sqlServerConfig).then(function () {
