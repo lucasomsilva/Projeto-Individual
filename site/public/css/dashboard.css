@@ -362,9 +362,9 @@ body {
 /* GRAFICO DE NPC */
 
 .interacoes {
-    border: #E2E8F0 solid;
     display: flex;
     width: 80%;
+    height: 50%;
     flex-direction: column;
     margin-left: 20%;
     margin-top: 5%;
@@ -372,30 +372,26 @@ body {
 
 .grafico2 {
     background-color: #E2E8F0;
-    height: 400px;
-    width: 30%;
-    margin-left: 50%;
     margin-top: 5%;
+    width: 30%;
+    height: 350px;
     border-radius: 12px;
 }
 
 .grafico-npc {
     display: flex;
     flex-direction: row;
-    border: blue solid;
+    justify-content: space-evenly;
 }
 
 .metricas-npc {
     background-color: #E2E8F0;
-    border: green solid;
-    margin-left: 22%;
-    margin-top: 5%;
-    font-family: 'Hapna-Slab', sans-serif;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 2);
-    font-weight: bold;
     border-radius: 12px;
-    width: 500px;
-    height: 500px;
-    display: flex;
-    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    margin-top: 10%;
+    font-family: 'Hapna-Slab', sans-serif;
+    font-weight: bold;
 }
