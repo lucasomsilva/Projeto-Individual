@@ -19,13 +19,18 @@
 
         <div class="secoes">
             <button onclick="abrirModalPersonagem()">
-                <img class="imagens" src="assets/img/imagens-site/adicao.svg">
+                <img class="imagens" src="assets/img/imagens-site/adicao.png">
                 <p>Adicionar personagem</p>
             </button>
             <br>
             <button onclick="abrirModalQuiz()">
                 <img class="imagens" src="assets/img/imagens-site/interrogacao.png">
                 <p>Quiz sobre Red Dead</p>
+            </button>
+            <br>
+            <button onclick="abrirModalHoras()">
+                <img class="imagens" src="assets/img/imagens-site/relogio.svg">
+                <p>Registrar horas jogadas</p>
             </button>
         </div>
 
@@ -59,14 +64,18 @@
 
     </section>
 
-    <div class="descricao-personagem" id="div_descricao">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        Dolorum fuga consequatur explicabo, ad odio recusandae maxime alias, ducimus voluptas quasi labore eaque facere
-        cumque doloremque cupiditate ex et blanditiis officiis!
+    <div class="descricao-personagem" id="div_descricao">
+        <h2 class="titulos">Descrição do seu personagem</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Dolorum fuga consequatur explicabo, ad odio recusandae maxime alias, ducimus voluptas quasi labore eaque
+            facere
+            cumque doloremque cupiditate ex et blanditiis officiis!
+        </p>
     </div>
 
     <section class="vendas">
 
-        <div class="titulos">
+        <div class="titulos" style="color: white;">
             <h1>Horas jogadas por mês </h1>
         </div>
 
@@ -106,14 +115,63 @@
 
     </section>
 
+    <div class="metricas-horas" id="div_metricas">
+        <h2 class="titulos">Relatório de horas jogadas</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Dolorum fuga consequatur explicabo, ad odio recusandae maxime alias, ducimus voluptas quasi labore eaque
+            facere
+            cumque doloremque cupiditate ex et blanditiis officiis!
+        </p>
+    </div>
+
+    <section class="tabela-metricas" id="tabela-metricas">
+        <div class="coluna1">
+            <h3>Horas jogadas</h3>
+            <h3 style="border-bottom: none;">Situação</h3>
+        </div>
+        <div class="coluna2">
+            <h3>Menos de 10 horas</h3>
+            <p>Jogador Casual</p>
+        </div>
+        <div class="coluna3">
+            <h3>10 a 20 horas</h3>
+            <p>Jogador Iniciante</p>
+        </div>
+        <div class="coluna4">
+            <h3>20 a 30 horas</h3>
+            <p>Jogador Moderado</p>
+        </div>
+        <div class="coluna5">
+            <h3>30 a 40 horas</h3>
+            <p>Jogador avançado</p>
+        </div>
+        <div class="coluna6">
+            <h3>Mais de 40 horas</h3>
+            <p>Jogador Hardcore</p>
+        </div>
+    </section>
+
     <section class="interacoes">
 
-        <div class="titulos">
+        <div class="titulos" style="color: white;">
             <h1>Interações com NPC</h1>
         </div>
 
-        <div class="grafico2">
-            <canvas id="grafico2" style="position: relative; height: 10vh; width: 10vw;"></canvas>
+        <div class="grafico-npc">
+
+            <!-- <div class="metricas-npc">
+                <h2 class="titulos">Relatório de horas jogadas</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolorum fuga consequatur explicabo, ad odio recusandae maxime alias, ducimus voluptas quasi labore
+                    eaque
+                    facere
+                    cumque doloremque cupiditate ex et blanditiis officiis!
+                </p>
+            </div> -->
+
+            <div class="grafico2">
+                <canvas id="grafico2" style="position: relative; height: 10vh; width: 10vw;"></canvas>
+            </div>
         </div>
 
     </section>
@@ -147,7 +205,33 @@
     <section class="janela-modal" id="janela-modal">
         <div class="modal">
             <button class="fechar" id="fechar">&times;</button>
-            <div class="box-personagem">
+            <div class="box-quiz">
+                <h1 class="titulos">Escolha seu personagem preferido</h1>
+                <select id="select_personagens">
+                    <option value="#">Selecione um personagem</option>
+                    <option value="arthur">Arthur Morgan</option>
+                    <option value="jhon">Jhon Marston</option>
+                    <option value="dutch">Dutch van Der Linde</option>
+                    <option value="micah">Micah Bell</option>
+                    <option value="hosea">Hosea Mattews</option>
+                    <option value="lenny">Lenny Summmers</option>
+                    <option value="sadie">Sadie Adler</option>
+                    <option value="javier">Javier Escuella</option>
+                    <option value="bill">Bil Williamson</option>
+                    <option value="uncle">Uncle</option>
+                    <option value="charles">Charles Smith</option>
+                </select>
+            </div>
+            <div class="botao">
+                <button class="button" onclick="registrarPersonagem()">Registrar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="janela-modal" id="janela-modal">
+        <div class="modal">
+            <button class="fechar" id="fechar">&times;</button>
+            <div class="box-horas">
                 <h1 class="titulos">Escolha seu personagem preferido</h1>
                 <select id="select_personagens">
                     <option value="#">Selecione um personagem</option>

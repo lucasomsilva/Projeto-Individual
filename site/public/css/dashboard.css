@@ -105,6 +105,7 @@ body {
 
 .janela-modal {
     width: 100vw;
+    border: blue solid;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -131,6 +132,7 @@ body {
     border-radius: 20px;
     align-items: center;
     justify-content: center;
+    border: green solid;
 }
 
 .fechar {
@@ -180,7 +182,7 @@ body {
 .modal select {
     background-color: black;
     color: white;
-    width: 50%;
+    width: 40%;
     height: 50px;
     border-radius: 12px;
     text-align: center;
@@ -245,17 +247,26 @@ body {
     justify-content: center;
 }
 
-.descricao-personagem {
+.descricao-personagem,
+.metricas-horas {
     background-color: #E2E8F0;
     margin-left: 22%;
     margin-top: -2%;
     font-family: 'Hapna-Slab', sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 2);
     font-weight: bold;
     border-radius: 12px;
     width: 50%;
     height: 150px;
     display: flex;
     align-items: center;
+}
+
+.metricas-horas,
+.descricao-personagem,
+.titulos {
+    color: black;
+    text-align: center;
 }
 
 /* GRÁFICO DE HORAS JOGADAS */
@@ -267,13 +278,11 @@ body {
     height: 100%;
     flex-direction: column;
     margin-left: 20%;
-    border: #7F1D1D solid;
 }
 
 .graficos {
     height: 80%;
     display: flex;
-    border: blue solid 5px;
     align-items: center;
     margin-top: 2%;
     justify-content: space-around;
@@ -285,7 +294,6 @@ body {
 }
 
 .indicadores {
-    border:#E2E8F0 solid;
     height: 70%;
     width: 30%;
     display: flex;
@@ -317,6 +325,40 @@ body {
     border-radius: 12px;
 }
 
+.metricas-horas {
+    margin-top: 1%;
+    margin-left: 35%;
+}
+
+.tabela-metricas {
+    width: 70%;
+    margin-top: 2%;
+    height: 50%;
+    background-color: #E2E8F0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+    margin-left: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.coluna1,
+.coluna2,
+.coluna3,
+.coluna4,
+.coluna5,
+.coluna6 {
+    font-family: 'Hapna-Slab', sans-serif;
+    font-weight: bold;
+    border-right: black solid;
+    width: 100%;
+}
+
+.tabela-metricas h3 {
+    border-bottom: black solid;
+    font-family: 'Chinese Rocks', sans-serif;
+}
+
 /* GRAFICO DE NPC */
 
 .interacoes {
@@ -325,15 +367,35 @@ body {
     width: 80%;
     flex-direction: column;
     margin-left: 20%;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .grafico2 {
     background-color: #E2E8F0;
-    display: flex;
-    justify-content: center;
     height: 400px;
     width: 30%;
     margin-left: 50%;
+    margin-top: 5%;
     border-radius: 12px;
+}
+
+.grafico-npc {
+    display: flex;
+    flex-direction: row;
+    border: blue solid;
+}
+
+.metricas-npc {
+    background-color: #E2E8F0;
+    border: green solid;
+    margin-left: 22%;
+    margin-top: 5%;
+    font-family: 'Hapna-Slab', sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+    font-weight: bold;
+    border-radius: 12px;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
 }
