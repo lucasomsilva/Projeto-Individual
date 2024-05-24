@@ -1,3 +1,59 @@
+const listaDescricaoPersonagens = [
+    'Assim como Arthur Morgan, você é um indivíduo multifacetado com uma vida interior rica. Sua força, compaixão e complexidade fazem de você alguém que deixa um impacto duradouro nas pessoas ao seu redor. Continue sendo você mesmo!', 
+    'Jhon Marston', 
+    'Dutch van Der Linde', 
+    'Micah Bell', 
+    'Hosea Mattews',
+    'Lenny Summers', 
+    'Sadie Adler', 
+    'Javier Escuella', 
+    'Bil Williamson', 
+    'Uncle', 
+    'Charles Smith'
+];
+
+function selecionarPersonagem() {
+    let personagemSelecionado = select_personagens.value;
+
+    // paragrafo_personagem.innerHTML = "a";
+
+    if (personagemSelecionado == "arthur") {
+        paragrafo_personagem.innerHTML += `${listaDescricaoPersonagens[0]}`;
+    } else if (personagemSelecionado == "jhon") {
+        paragrafo_personagem.innerHTML += `${listaDescricaoPersonagens[0]}`;
+    } else if (personagemSelecionado == "dutch") {
+        paragrafo_personagem.innerHTML += `${listaDescricaoPersonagens[0]}`;
+    } else if (personagemSelecionado == "micah") {
+        paragrafo_personagem.innerHTML += `${listaDescricaoPersonagens[0]}`;
+    } else if (personagemSelecionado == "hosea") {
+        paragrafo_personagem.innerHTML += `${listaDescricaoPersonagens[0]}`;
+    } else if (personagemSelecionado == "lenny") {
+        paragrafo_personagem.innerHTML += `${listaDescricaoPersonagens[0]}`;
+    } else if (personagemSelecionado == "sadie") {
+        paragrafo_personagem.innerHTML += `${listaDescricaoPersonagens[0]}`;
+    } else if (personagemSelecionado == "javier") {
+        paragrafo_personagem.innerHTML += `${listaDescricaoPersonagens[0]}`;
+    } else if (personagemSelecionado == "bill") {
+        paragrafo_personagem.innerHTML += `${listaDescricaoPersonagens[0]}`;
+    } else if (personagemSelecionado == "uncle") {
+        paragrafo_personagem.innerHTML += `${listaDescricaoPersonagens[0]}`;
+    } else if (personagemSelecionado == "charles") {
+        paragrafo_personagem.innerHTML += `${listaDescricaoPersonagens[0]}`;
+    }
+
+    paragrafo_personagem.innerHTML = "n entrei no if n"
+}
+
+function nulo() {
+    vazio.style.display = "none";
+}
+
+
+
+
+
+
+
 var idUsuario = sessionStorage.ID_USUARIO;
 var nome = sessionStorage.NOME_USUARIO;
 titulo.innerHTML = `Bem vindo(a) ${nome}`

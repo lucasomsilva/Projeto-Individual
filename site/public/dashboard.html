@@ -161,7 +161,9 @@
 
             <div class="metricas-npc">
                 <h2 class="titulos">Interações pelo jogo</h2>
-                <p>Continue assim! Cumprimentar e conversar os NPC's ao redor do jogo é primordial, nucna se sabe quando eles te recompensarão com ajudas ou algo do tipo. Além de que, é sempre bom manter a honra alta e ser amigo de todos! Cuidado ao horilizar ou roubar, isso não é bom para o desenrolar da história.
+                <p>Continue assim! Cumprimentar e conversar os NPC's ao redor do jogo é primordial, nucna se sabe quando
+                    eles te recompensarão com ajudas ou algo do tipo. Além de que, é sempre bom manter a honra alta e
+                    ser amigo de todos! Cuidado ao horilizar ou roubar, isso não é bom para o desenrolar da história.
                 </p>
             </div>
 
@@ -177,14 +179,14 @@
             <button class="fechar" id="fechar">&times;</button>
             <div class="box-personagem">
                 <h1 class="titulos">Escolha seu personagem preferido</h1>
-                <select id="select_personagens">
-                    <option value="#">Selecione um personagem</option>
+                <select onfocus="nulo()" onchange="selecionarPersonagem()" id="select_personagens">
+                    <option value="#" id="vazio">Selecione um personagem</option>
                     <option value="arthur">Arthur Morgan</option>
                     <option value="jhon">Jhon Marston</option>
                     <option value="dutch">Dutch van Der Linde</option>
                     <option value="micah">Micah Bell</option>
                     <option value="hosea">Hosea Mattews</option>
-                    <option value="lenny">Lenny Summmers</option>
+                    <option value="lenny">Lenny Summers</option>
                     <option value="sadie">Sadie Adler</option>
                     <option value="javier">Javier Escuella</option>
                     <option value="bill">Bil Williamson</option>
@@ -192,8 +194,12 @@
                     <option value="charles">Charles Smith</option>
                 </select>
             </div>
-            <div class="botao">
-                <button class="button" onclick="registrarPersonagem()">Registrar</button>
+                
+            <h2 style="font-family: 'Chinese Rocks', sans-serif;">Descrição do personagem</h2>
+
+            <div style="font-family: 'Hapna-Slab', sans-serif; font-weight: bold;" id="paragrafo_personagem"></div>
+            <div class="botao-personagem">
+                <button class="button-personagem" onclick="registrarPersonagem()">Registrar</button>
             </div>
         </div>
     </section>

@@ -105,7 +105,6 @@ body {
 
 .janela-modal {
     width: 100vw;
-    border: blue solid;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -132,7 +131,6 @@ body {
     border-radius: 20px;
     align-items: center;
     justify-content: center;
-    border: green solid;
 }
 
 .fechar {
@@ -176,7 +174,6 @@ body {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    border: #7F1D1D solid;
 }
 
 .modal select {
@@ -189,6 +186,33 @@ body {
     font-family: 'Hapna-Slab', sans-serif;
     font-weight: bold;
     font-size: 20px;
+}
+
+.botao-personagem {
+    display: flex;
+    margin-top: 5%;
+    justify-content: center;
+}
+
+.modal .button-personagem {
+    background-color: #7F1D1D;
+    color: #E2E8F0;
+    width: 10%;
+    height: 50px;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Chinese Rocks', sans-serif;
+    font-size: 20px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.3);
+}
+
+.modal .button-personagem:hover {
+    background-color: white;
+    color: #7F1D1D;
+    box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.3);
+    cursor: pointer;
 }
 
 /* PERSONAGEM PREFERIDO */
@@ -204,13 +228,12 @@ body {
 
 .card-personagem {
     color: black;
-    background-color: #E2E8F0;
+    background-color:#E2E8F0;
     flex-direction: row;
     display: flex;
     align-items: center;
     width: 28%;
     height: 40%;
-    font-family: 'Hapna-Slab', sans-serif;
     border-radius: 8px;
 }
 
@@ -229,11 +252,13 @@ body {
 
 .texto-card h2 {
     font-size: 20px;
+    font-family: 'Chinese Rocks', sans-serif;
     font-weight: bolder;
     margin: 0;
 }
 
 .texto-card p{
+    font-family: 'Hapna-Slab', sans-serif;
     margin: 10px;
 }
 
