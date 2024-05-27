@@ -1,6 +1,6 @@
 const listaDescricaoPersonagens = [
     'Assim como Arthur Morgan, você é um indivíduo multifacetado com uma vida interior rica. Sua força, compaixão e complexidade fazem de você alguém que deixa um impacto duradouro nas pessoas ao seu redor. Continue sendo você mesmo!', 
-    'Jhon Marston', 
+    'Assim como John, você valoriza profundamente suas relações pessoais e faz o possível para proteger e cuidar daqueles que ama. Seu espírito aventureiro e sua capacidade de enfrentar o desconhecido com bravura são características que fazem de você uma pessoa única e admirável.', 
     'Dutch van Der Linde', 
     'Micah Bell', 
     'Hosea Mattews',
@@ -15,44 +15,34 @@ const listaDescricaoPersonagens = [
 function selecionarPersonagem() {
     let personagemSelecionado = select_personagens.value;
 
-    // paragrafo_personagem.innerHTML = "a";
-
-    if (personagemSelecionado == "arthur") {
-        paragrafo_personagem.innerHTML += `${listaDescricaoPersonagens[0]}`;
+    if (personagemSelecionado = "arthur") {
+        paragrafo_personagem.innerHTML = `${listaDescricaoPersonagens[0]}`;
     } else if (personagemSelecionado == "jhon") {
-        paragrafo_personagem.innerHTML += `${listaDescricaoPersonagens[0]}`;
-    } else if (personagemSelecionado == "dutch") {
-        paragrafo_personagem.innerHTML += `${listaDescricaoPersonagens[0]}`;
-    } else if (personagemSelecionado == "micah") {
-        paragrafo_personagem.innerHTML += `${listaDescricaoPersonagens[0]}`;
-    } else if (personagemSelecionado == "hosea") {
-        paragrafo_personagem.innerHTML += `${listaDescricaoPersonagens[0]}`;
-    } else if (personagemSelecionado == "lenny") {
-        paragrafo_personagem.innerHTML += `${listaDescricaoPersonagens[0]}`;
-    } else if (personagemSelecionado == "sadie") {
-        paragrafo_personagem.innerHTML += `${listaDescricaoPersonagens[0]}`;
-    } else if (personagemSelecionado == "javier") {
-        paragrafo_personagem.innerHTML += `${listaDescricaoPersonagens[0]}`;
-    } else if (personagemSelecionado == "bill") {
-        paragrafo_personagem.innerHTML += `${listaDescricaoPersonagens[0]}`;
-    } else if (personagemSelecionado == "uncle") {
-        paragrafo_personagem.innerHTML += `${listaDescricaoPersonagens[0]}`;
-    } else if (personagemSelecionado == "charles") {
-        paragrafo_personagem.innerHTML += `${listaDescricaoPersonagens[0]}`;
+        paragrafo_personagem.innerHTML = `${listaDescricaoPersonagens[1]}`;
+    } else if (personagemSelecionado = "dutch") {
+        paragrafo_personagem.innerHTML = `${listaDescricaoPersonagens[2]}`;
+    } else if (personagemSelecionado = "micah") {
+        paragrafo_personagem.innerHTML = `${listaDescricaoPersonagens[3]}`;
+    } else if (personagemSelecionado = "hosea") {
+        paragrafo_personagem.innerHTML = `${listaDescricaoPersonagens[4]}`;
+    } else if (personagemSelecionado = "lenny") {
+        paragrafo_personagem.innerHTML = `${listaDescricaoPersonagens[5]}`;
+    } else if (personagemSelecionado = "sadie") {
+        paragrafo_personagem.innerHTML = `${listaDescricaoPersonagens[6]}`;
+    } else if (personagemSelecionado = "javier") {
+        paragrafo_personagem.innerHTML = `${listaDescricaoPersonagens[7]}`;
+    } else if (personagemSelecionado = "bill") {
+        paragrafo_personagem.innerHTML = `${listaDescricaoPersonagens[8]}`;
+    } else if (personagemSelecionado = "uncle") {
+        paragrafo_personagem.innerHTML = `${listaDescricaoPersonagens[9]}`;
+    } else if (personagemSelecionado = "charles") {
+        paragrafo_personagem.innerHTML = `${listaDescricaoPersonagens[10]}`;
     }
-
-    paragrafo_personagem.innerHTML = "n entrei no if n"
 }
 
 function nulo() {
     vazio.style.display = "none";
 }
-
-
-
-
-
-
 
 var idUsuario = sessionStorage.ID_USUARIO;
 var nome = sessionStorage.NOME_USUARIO;
