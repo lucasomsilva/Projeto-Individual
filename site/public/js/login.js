@@ -1,3 +1,27 @@
+window.addEventListener('load', function getRandomImage() {
+    document.section.style.backgroundImage = `url(${getRandomImage()})`;
+});
+
+function getRandomImage() {
+    const listaImagens = [
+        '../assets/img/imagens-aleatorias/imagem-1.png',
+        '../assets/img/imagens-aleatorias/imagem-2.jpg',
+        '../assets/img/imagens-aleatorias/imagem-3.jpg',
+        '../assets/img/imagens-aleatorias/imagem-4.jpg',
+        '../assets/img/imagens-aleatorias/imagem-5.jpg',
+        '../assets/img/imagens-aleatorias/imagem-6.jpg',
+        '../assets/img/imagens-aleatorias/imagem-7.jpg',        
+        '../assets/img/imagens-aleatorias/imagem-8.jpg',
+        '../assets/img/imagens-aleatorias/imagem-9.jpg',
+        '../assets/img/imagens-aleatorias/imagem-10.jpg',
+        '../assets/img/imagens-aleatorias/imagem-11.jpg',
+        '../assets/img/imagens-aleatorias/imagem-12.jpg'
+    ];
+
+    const randomIndex = Math.floor(Math.random() * listaImagens.length);
+    return images[randomIndex];
+}
+
 function entrar() {
 
     var emailVar = input_email.value;

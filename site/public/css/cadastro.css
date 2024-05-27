@@ -14,7 +14,7 @@ section {
     width: 100%;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/img/imagens-site/background-cadastro.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/img/imagens-aleatorias/imagem-1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -22,7 +22,6 @@ section {
 
 .box-inputs {
     background: transparent;
-    /* border: 2px solid rgba(255, 255, 255, 0.3); */
     backdrop-filter: blur(20px);
     box-shadow: 0 0 10px rgba(0, 0, 0, 2);
     border-radius: 25px;

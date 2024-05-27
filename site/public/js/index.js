@@ -14,10 +14,10 @@ function prevSlide() {
 
 function updateCarousel() {
     const carouselContent = document.querySelector('.carousel-content');
-    const slideWidth = carouselContent.offsetWidth; // Obtém a largura do contêiner do carrossel
+    const slideWidth = carouselContent.offsetWidth; 
     carouselContent.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
 
-    // Atualizar indicadores de slide
+
     const indicators = document.querySelectorAll('.slide-indicator');
     indicators.forEach((indicator, index) => {
         indicator.classList.remove('active');
@@ -27,7 +27,7 @@ function updateCarousel() {
     });
 }
 
-// Criar indicadores de slide
+
 document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelectorAll('.carousel-content .slide');
     const slideIndicatorsContainer = document.querySelector('.slide-indicators');
@@ -44,12 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
         slideIndicatorsContainer.appendChild(indicator);
     });
     
-    // Atualizar o carrossel quando a janela é redimensionada
+
     window.addEventListener('resize', () => {
         updateCarousel();
     });
 
-    // Atualizar o carrossel após o carregamento completo da página
+
     setTimeout(() => {
         updateCarousel();
     }, 0);
