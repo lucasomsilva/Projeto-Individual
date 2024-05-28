@@ -183,7 +183,7 @@ body {
     animation: abrirModal 0.5s;
 }
 
-.box-personagem {
+.box-modal {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -203,13 +203,13 @@ body {
     font-size: 20px;
 }
 
-.botao-personagem {
+.botao-modal {
     display: flex;
     margin-top: 5%;
     justify-content: center;
 }
 
-.modal .button-personagem {
+.modal .button-modal {
     background-color: #7F1D1D;
     color: #E2E8F0;
     width: 10%;
@@ -223,11 +223,25 @@ body {
     box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.3);
 }
 
-.modal .button-personagem:hover {
+.modal .button-modal:hover {
     background-color: white;
     color: #7F1D1D;
     box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.3);
     cursor: pointer;
+}
+
+.modal input {
+    margin: 15px;
+    margin-top: 5px;
+    width: 255px;
+    height: 40px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Chinese Rocks', sans-serif;
+    outline: 3px solid #7F1D1D;
+    border: none;
+    transition: 0.25s;
 }
 
 /* PERSONAGEM PREFERIDO */

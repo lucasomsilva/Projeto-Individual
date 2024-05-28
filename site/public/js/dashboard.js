@@ -1,6 +1,5 @@
 var idUsuario = sessionStorage.ID_USUARIO;
 
-
 const listaDescricaoPersonagens = [
     'Você é uma pessoa complexa e profundamente reflexiva, que valoriza a lealdade e a moralidade, mesmo em meio a circunstâncias difíceis. Você acredita na possibilidade de mudança e é uma pessoa que se esforça para encontrar o equilíbrio entre o bem e o mal, a lealdade e a justiça.',
 
@@ -32,29 +31,29 @@ function selecionarPersonagem() {
     let personagemSelecionado = selectPersonagens.value;
     let paragrafoPersonagem = document.getElementById('paragrafo_personagem');
 
-    if (personagemSelecionado === "arthur") {
+    if (personagemSelecionado === "Arthur") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[0]}`;
-    } else if (personagemSelecionado === "jhon") {
+    } else if (personagemSelecionado === "Jhon") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[1]}`;
-    } else if (personagemSelecionado === "dutch") {
+    } else if (personagemSelecionado === "Dutch") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[2]}`;
-    } else if (personagemSelecionado === "micah") {
+    } else if (personagemSelecionado === "Micah") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[3]}`;
-    } else if (personagemSelecionado === "hosea") {
+    } else if (personagemSelecionado === "Hosea") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[4]}`;
-    } else if (personagemSelecionado === "lenny") {
+    } else if (personagemSelecionado === "Lenny") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[5]}`;
-    } else if (personagemSelecionado === "sadie") {
+    } else if (personagemSelecionado === "Sadie") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[6]}`;
-    } else if (personagemSelecionado === "javier") {
+    } else if (personagemSelecionado === "Javier") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[7]}`;
-    } else if (personagemSelecionado === "bill") {
+    } else if (personagemSelecionado === "Bill") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[8]}`;
-    } else if (personagemSelecionado === "uncle") {
+    } else if (personagemSelecionado === "Uncle") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[9]}`;
-    } else if (personagemSelecionado === "charles") {
+    } else if (personagemSelecionado === "Charles") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[10]}`;
-    } else if (personagemSelecionado === "sean") {
+    } else if (personagemSelecionado === "Sean") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[11]}`;
     }
 }
@@ -115,13 +114,62 @@ function mostrarPersonagem() {
         .then(function (resposta) {
             resposta.json().then((resposta) => {
                 resposta.forEach((resposta) => {
-                    if (resposta.livro) {
-                        descricao.innerHTML = `${resposta.livro}`;
+                    if (resposta.nome) {
+                        personagem_escolhido.innerHTML = `${resposta.personagem}`;
                     }
                 });
             });
         });
 }
+
+function registrarTempoDeJogo() {
+
+    var mes = select_mes.value;
+    var tempoDeJogo = hora_de_jogo.value;
+
+    if (
+        mes == "" ||
+        tempoDeJogo == ""
+    ) {
+        return false;
+    } else {
+        fetch("/personagem/registrarTempoDeJogo", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                mesServer: mes,
+                tempoDeJogoServer: tempoDeJogo,
+                fkUsuarioServer: idUsuario
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    console.log(resposta);
+
+                    resposta.json().then(json => {
+                        console.log(json);
+                        console.log(JSON.stringify(json));
+
+                    });
+
+                }
+            })
+
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
+
+        return false;
+    }
+}
+
+window.onload = function () {
+    mostrarPersonagem();
+};
 
 var idUsuario = sessionStorage.ID_USUARIO;
 var nome = sessionStorage.NOME_USUARIO;
@@ -239,7 +287,7 @@ function abrirModalQuiz() {
 
 }
 
-function abrirModalHoras() {
+function abrirModalJogosMes() {
     const modal = document.getElementById('janela-modal3');
     modal.classList.add('abrir');
 

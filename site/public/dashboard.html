@@ -33,9 +33,9 @@
                 <p>Quiz sobre Red Dead</p>
             </button>
             <br>
-            <button onclick="abrirModalHoras()">
+            <button onclick="abrirModalJogosMes()">
                 <img class="imagens" src="assets/img/imagens-site/relogio.svg">
-                <p>Registrar horas jogadas</p>
+                <p>Registrar novo jogo</p>
             </button>
         </div>
 
@@ -50,7 +50,7 @@
             <img src="assets/img/imagens-site/estrela.png">
             <div class="texto-card">
                 <h2>Personagem preferido</h2>
-                <p>Arthur Morgan</p>
+                <div style="font-family: 'Hapna-Slab', sans-serif;" id="personagem_escolhido"></div>
             </div>
         </div>
 
@@ -58,7 +58,7 @@
             <img src="assets/img/imagens-site/mais.png">
             <div class="texto-card">
                 <h2>Personagem mais escolhido</h2>
-                <p>Arthur Morgan</p>
+                <p id="personagem_mais_escolhido"></p>
             </div>
         </div>
 
@@ -81,7 +81,7 @@
     <section class="vendas">
 
         <div class="titulos" style="color: white;">
-            <h1>Horas jogadas por mês </h1>
+            <h1>Vezes que jogou por mês </h1>
         </div>
 
         <div class="graficos">
@@ -105,8 +105,8 @@
                 <div class="card">
                     <img class="imagens" src="assets/img/imagens-site/hora.png">
                     <div class="texto-card-horas">
-                        <h2>Médias de horas por mês</h2>
-                        <p>5 horas</p>
+                        <h2>Médias de vezes jogadas por mês</h2>
+                        <p>5</p>
                     </div>
                 </div>
 
@@ -121,7 +121,7 @@
     </section>
 
     <div class="metricas-horas" id="div_metricas">
-        <h2 class="titulos">Relatório de horas jogadas</h2>
+        <h2 class="titulos">Relatório de vezes jogadas</h2>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Dolorum fuga consequatur explicabo, ad odio recusandae maxime alias, ducimus voluptas quasi labore eaque
             facere
@@ -131,27 +131,27 @@
 
     <section class="tabela-metricas" id="tabela-metricas">
         <div class="coluna1">
-            <h3>Horas jogadas</h3>
+            <h3>Quantidade de Jogos</h3>
             <h3 style="border-bottom: none;">Situação</h3>
         </div>
         <div class="coluna2">
-            <h3>Menos de 10 horas</h3>
+            <h3>Menos de 10 vezes</h3>
             <p>Jogador Casual</p>
         </div>
         <div class="coluna3">
-            <h3>10 a 20 horas</h3>
+            <h3>10 a 20 vezes</h3>
             <p>Jogador Iniciante</p>
         </div>
         <div class="coluna4">
-            <h3>20 a 30 horas</h3>
+            <h3>20 a 30 vezes</h3>
             <p>Jogador Moderado</p>
         </div>
         <div class="coluna5">
-            <h3>30 a 40 horas</h3>
+            <h3>30 a 40 vezes</h3>
             <p>Jogador avançado</p>
         </div>
         <div class="coluna6">
-            <h3>Mais de 40 horas</h3>
+            <h3>Mais de 40 vezes</h3>
             <p>Jogador Hardcore</p>
         </div>
     </section>
@@ -182,30 +182,30 @@
     <section class="janela-modal" id="janela-modal">
         <div class="modal">
             <button class="fechar" id="fechar">&times;</button>
-            <div class="box-personagem">
+            <div class="box-modal">
                 <h1 class="titulos">Escolha seu personagem preferido</h1>
                 <select onfocus="nulo()" onchange="selecionarPersonagem()" id="select_personagens">
                     <option value="#" id="vazio">Selecione um personagem</option>
-                    <option value="arthur">Arthur Morgan</option>
-                    <option value="jhon">Jhon Marston</option>
-                    <option value="dutch">Dutch van Der Linde</option>
-                    <option value="micah">Micah Bell</option>
-                    <option value="hosea">Hosea Mattews</option>
-                    <option value="lenny">Lenny Summers</option>
-                    <option value="sadie">Sadie Adler</option>
-                    <option value="javier">Javier Escuella</option>
-                    <option value="bill">Bil Williamson</option>
-                    <option value="uncle">Uncle</option>
-                    <option value="charles">Charles Smith</option>
-                    <option value="sean">Sean MacGuire</option>
+                    <option value="Arthur">Arthur Morgan</option>
+                    <option value="Jhon">Jhon Marston</option>
+                    <option value="Dutch">Dutch van Der Linde</option>
+                    <option value="Micah">Micah Bell</option>
+                    <option value="Hosea">Hosea Mattews</option>
+                    <option value="Lenny">Lenny Summers</option>
+                    <option value="Sadie">Sadie Adler</option>
+                    <option value="Javier">Javier Escuella</option>
+                    <option value="Bill">Bil Williamson</option>
+                    <option value="Uncle">Uncle</option>
+                    <option value="Charles">Charles Smith</option>
+                    <option value="Sean">Sean MacGuire</option>
                 </select>
             </div>
-                
+
             <h2 style="font-family: 'Chinese Rocks', sans-serif;">Descrição do personagem</h2>
 
             <div style="font-family: 'Hapna-Slab', sans-serif; font-weight: bold;" id="paragrafo_personagem"></div>
-            <div class="botao-personagem">
-                <button class="button-personagem" onclick="registrarPersonagem()">Registrar</button>
+            <div class="botao-modal">
+                <button class="button-modal" onclick="registrarPersonagem()">Registrar</button>
             </div>
         </div>
     </section>
@@ -213,25 +213,12 @@
     <section class="janela-modal" id="janela-modal2">
         <div class="modal">
             <button class="fechar" id="fechar">&times;</button>
-            <div class="box-quiz">
-                <h1 class="titulos">Escolha seu personagem preferido</h1>
-                <select onfocus="nulo()" onchange="selecionarPersonagem()" id="select_personagens">
-                    <option value="#" id="vazio">Selecione um personagem</option>
-                    <option value="arthur">Arthur Morgan</option>
-                    <option value="jhon">Jhon Marston</option>
-                    <option value="dutch">Dutch van Der Linde</option>
-                    <option value="micah">Micah Bell</option>
-                    <option value="hosea">Hosea Mattews</option>
-                    <option value="lenny">Lenny Summmers</option>
-                    <option value="sadie">Sadie Adler</option>
-                    <option value="javier">Javier Escuella</option>
-                    <option value="bill">Bil Williamson</option>
-                    <option value="uncle">Uncle</option>
-                    <option value="charles">Charles Smith</option>
-                </select>
+            <div class="box-modal">
+                <h1 class="titulos">Você sabe tudo sobre Red Dead Redemption 2?</h1>
+
             </div>
-            <div class="botao">
-                <button class="button" onclick="registrarPersonagem()">Registrar</button>
+            <div class="botao-modal">
+                <button class="button-modal" onclick="iniciarQuiz()">Iniciar</button>
             </div>
         </div>
     </section>
@@ -239,13 +226,13 @@
     <section class="janela-modal" id="janela-modal3">
         <div class="modal">
             <button class="fechar" id="fechar">&times;</button>
-            <div class="box-horas">
+            <div class="box-modal">
                 <h1 class="titulos">Escolha o mês que você quer cadastrar as horas</h1>
-                <select onfocus="nulo()" onchange="selecionarPersonagem()" id="select_personagens">
+                <select onfocus="nulo()" id="select_mes">
                     <option value="#" id="vazio">Selecione um mês</option>
                     <option value="janeiro">Janeiro</option>
                     <option value="fevereiro">Fevereiro</option>
-                    <option value="marco">Marcço</option>
+                    <option value="marco">Março</option>
                     <option value="abril">Abril</option>
                     <option value="maio">Maio</option>
                     <option value="junho">Junho</option>
@@ -256,9 +243,18 @@
                     <option value="novembro">Novembro</option>
                     <option value="dezembro">Dezembro</option>
                 </select>
+
+                <h2 style="font-family: 'Chinese Rocks', sans-serif;">Digite seu tempo de jogo</h2>
+
+                <div style="font-family: 'Hapna-Slab', sans-serif; font-weight: bold;" id="paragrafo_personagem">
+                    <input type="text" placeholder="00:00:00" id="hora_de_jogo">
+                
+                </div>
+                
+
             </div>
-            <div class="botao">
-                <button class="button" onclick="registrarPersonagem()">Registrar</button>
+            <div class="botao-modal">
+                <button class="button-modal" onclick="registrarTempoDeJogo()">Registrar</button>
             </div>
         </div>
     </section>
