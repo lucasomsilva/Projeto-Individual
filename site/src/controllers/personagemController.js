@@ -1,3 +1,6 @@
+var personagemModel = require("../models/personagemModel");
+
+
 function registrarPersonagem(req, res) {
     var personagem = req.body.personagemServer
     var fkUsuario = req.body.fkUsuarioServer;
@@ -16,3 +19,7 @@ function registrarPersonagem(req, res) {
         res.status(500).json(erro.sqlMessage);
     })
 }
+
+module.exports = {
+    registrarPersonagem
+};

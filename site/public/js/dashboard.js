@@ -1,11 +1,14 @@
+var idUsuario = sessionStorage.ID_USUARIO;
+
+
 const listaDescricaoPersonagens = [
     'Você é uma pessoa complexa e profundamente reflexiva, que valoriza a lealdade e a moralidade, mesmo em meio a circunstâncias difíceis. Você acredita na possibilidade de mudança e é uma pessoa que se esforça para encontrar o equilíbrio entre o bem e o mal, a lealdade e a justiça.',
 
-    'Você valoriza profundamente suas relações pessoais e faz o possível para proteger e cuidar daqueles que ama. Seu espírito aventureiro e sua capacidade de enfrentar o desconhecido com bravura são características que fazem de você uma pessoa única e admirável.', 
+    'Você valoriza profundamente suas relações pessoais e faz o possível para proteger e cuidar daqueles que ama. Seu espírito aventureiro e sua capacidade de enfrentar o desconhecido com bravura são características que fazem de você uma pessoa única e admirável.',
 
-    'Você é uma pessoa carismática e visionária, com um talento natural para liderar e inspirar os outros. Possui uma mente estratégica e está sempre em busca de um propósito maior além de seu entusiasmo e confiança serem contagiantes, porém nção enxergando as consequências de suas ações.', 
+    'Você é uma pessoa carismática e visionária, com um talento natural para liderar e inspirar os outros. Possui uma mente estratégica e está sempre em busca de um propósito maior além de seu entusiasmo e confiança serem contagiantes, porém nção enxergando as consequências de suas ações.',
 
-    'Você é uma pessoa astuta e engenhosa, capaz de se adaptar rapidamente a diferentes situações. Sabe como manipular as circunstâncias além de ser muito determinado. Você pode ser visto como alguém que valoriza mais seus próprios interesses do que os dos outros', 
+    'Você é uma pessoa astuta e engenhosa, capaz de se adaptar rapidamente a diferentes situações. Sabe como manipular as circunstâncias além de ser muito determinado. Você pode ser visto como alguém que valoriza mais seus próprios interesses do que os dos outros',
 
     'Você é uma pessoa sagaz e experiente conhecido por sua paciência e diplomacia, com uma mente afiada e muita sabedoria. Um estrategista nato, planeja cuidadosamente seus movimentos. Sua capacidade de analisar situações complexas o tornam um conselheiro valioso e confiável.',
 
@@ -57,19 +60,20 @@ function selecionarPersonagem() {
 }
 
 function nulo() {
-    vazio.style.display = "none";
+    vazio.style.display = 'none';
 }
 
 function registrarPersonagem() {
 
-    var personagem = select_personagens.value;
+    let selectPersonagens = document.getElementById('select_personagens');
+    let personagem = selectPersonagens.value;
 
     if (
         personagem == ""
     ) {
         return false;
     } else {
-        fetch("/livro/livroFav", {
+        fetch("/personagem/registrarPersonagem", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -99,6 +103,24 @@ function registrarPersonagem() {
         return false;
     }
 
+}
+
+function mostrarPersonagem() {
+    fetch(`/personagem/mostrarPersonagem/${idUsuario}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+        .then(function (resposta) {
+            resposta.json().then((resposta) => {
+                resposta.forEach((resposta) => {
+                    if (resposta.livro) {
+                        descricao.innerHTML = `${resposta.livro}`;
+                    }
+                });
+            });
+        });
 }
 
 var idUsuario = sessionStorage.ID_USUARIO;
