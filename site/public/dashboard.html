@@ -210,13 +210,13 @@
         </div>
     </section>
 
-    <section class="janela-modal" id="janela-modal">
+    <section class="janela-modal" id="janela-modal2">
         <div class="modal">
             <button class="fechar" id="fechar">&times;</button>
             <div class="box-quiz">
                 <h1 class="titulos">Escolha seu personagem preferido</h1>
-                <select id="select_personagens">
-                    <option value="#">Selecione um personagem</option>
+                <select onfocus="nulo()" onchange="selecionarPersonagem()" id="select_personagens">
+                    <option value="#" id="vazio">Selecione um personagem</option>
                     <option value="arthur">Arthur Morgan</option>
                     <option value="jhon">Jhon Marston</option>
                     <option value="dutch">Dutch van Der Linde</option>
@@ -236,13 +236,13 @@
         </div>
     </section>
 
-    <section class="janela-modal" id="janela-modal">
+    <section class="janela-modal" id="janela-modal3">
         <div class="modal">
             <button class="fechar" id="fechar">&times;</button>
             <div class="box-horas">
                 <h1 class="titulos">Escolha o mês que você quer cadastrar as horas</h1>
-                <select id="select_personagens">
-                    <option value="#">Selecione um mês</option>
+                <select onfocus="nulo()" onchange="selecionarPersonagem()" id="select_personagens">
+                    <option value="#" id="vazio">Selecione um mês</option>
                     <option value="janeiro">Janeiro</option>
                     <option value="fevereiro">Fevereiro</option>
                     <option value="marco">Marcço</option>

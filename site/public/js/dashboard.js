@@ -60,6 +60,47 @@ function nulo() {
     vazio.style.display = "none";
 }
 
+function registrarPersonagem() {
+
+    var personagem = select_personagens.value;
+
+    if (
+        personagem == ""
+    ) {
+        return false;
+    } else {
+        fetch("/livro/livroFav", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                personagemServer: personagem,
+                fkUsuarioServer: idUsuario
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    console.log(resposta);
+
+                    resposta.json().then(json => {
+                        console.log(json);
+                        console.log(JSON.stringify(json));
+                    });
+
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
+
+        return false;
+    }
+
+}
+
 var idUsuario = sessionStorage.ID_USUARIO;
 var nome = sessionStorage.NOME_USUARIO;
 titulo.innerHTML = `Bem vindo(a) ${nome}`
@@ -165,11 +206,11 @@ function abrirModalPersonagem() {
 }
 
 function abrirModalQuiz() {
-    const modal = document.getElementById('janela-modal');
+    const modal = document.getElementById('janela-modal2');
     modal.classList.add('abrir');
 
     modal.addEventListener('click', (e) => {
-        if (e.target.id == 'fechar' || e.target.id == 'janela-modal') {
+        if (e.target.id == 'fechar' || e.target.id == 'janela-modal2') {
             modal.classList.remove('abrir')
         }
     });
@@ -177,11 +218,11 @@ function abrirModalQuiz() {
 }
 
 function abrirModalHoras() {
-    const modal = document.getElementById('janela-modal');
+    const modal = document.getElementById('janela-modal3');
     modal.classList.add('abrir');
 
     modal.addEventListener('click', (e) => {
-        if (e.target.id == 'fechar' || e.target.id == 'janela-modal') {
+        if (e.target.id == 'fechar' || e.target.id == 'janela-modal3') {
             modal.classList.remove('abrir')
         }
     });
