@@ -1,27 +1,5 @@
 var personagemModel = require("../models/personagemModel");
 
-function registrarTempoDeJogo(req, res) {
-    var mes = req.body.mesServer;
-    var tempoDeJogo = req.body.tempoDeJogoServer;
-    var fkUsuario = req.body.fkUsuarioServer;
-
-    if (mes == undefined) {
-        res.status(400).send("O mes está undefined!");
-    }
-    if (tempoDeJogo == undefined) {
-        res.status(400).send("O tempoDeJogo está undefined!");
-    }
-    if (fkUsuario == undefined) {
-        res.status(400).send("A fkUsuario está undefined!");
-    }
-
-    personagemModel.registrarTempoDeJogo(mes, tempoDeJogo, fkUsuario).then(function (resposta) {
-        res.status(200).send("Dados inserido com sucesso");
-    }).catch(function (erro) {
-        res.status(500).json(erro.sqlMessage);
-    })
-}
-
 function registrarPersonagem(req, res) {
     var personagem = req.body.personagemServer
     var fkUsuario = req.body.fkUsuarioServer;
@@ -47,8 +25,39 @@ function mostrarPersonagem(req, res) {
     });
 }
 
+function registrarTempoDeJogo(req, res) {
+    var dataJogo = req.body.dataJogoServer;
+    var tempoDeJogo = req.body.tempoDeJogoServer;
+    var fkUsuario = req.body.fkUsuarioServer;
+
+    if (dataJogo == undefined) {
+        res.status(400).send("O dataJogo está undefined!");
+    }
+    if (tempoDeJogo == undefined) {
+        res.status(400).send("O tempoDeJogo está undefined!");
+    }
+    if (fkUsuario == undefined) {
+        res.status(400).send("A fkUsuario está undefined!");
+    }
+
+    personagemModel.registrarTempoDeJogo(dataJogo, tempoDeJogo, fkUsuario).then(function (resposta) {
+        res.status(200).send("Dados inserido com sucesso");
+    }).catch(function (erro) {
+        res.status(500).json(erro.sqlMessage);
+    })
+}
+
+function mostrarMesjogados(req, res) {
+    var idUsuario = req.params.idUsuario;
+
+    personagemModel.mostrarMesjogados(idUsuario).then((resposta) => {
+        res.status(200).json(resposta);
+    });
+}
+
 module.exports = {
     registrarPersonagem,
     mostrarPersonagem,
-    registrarTempoDeJogo
+    registrarTempoDeJogo,
+    mostrarMesjogados
 };

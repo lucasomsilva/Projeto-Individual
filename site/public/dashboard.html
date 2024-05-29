@@ -90,7 +90,7 @@
                     <img class="imagens" src="assets/img/imagens-site/bom.png">
                     <div class="texto-card-horas">
                         <h2>Mês que mais jogou</h2>
-                        <p>Janeiro</p>
+                        <p id="mes_mais_jogado"></p>
                     </div>
                 </div>
 
@@ -98,7 +98,7 @@
                     <img class="imagens" src="assets/img/imagens-site/ruim.png">
                     <div class="texto-card-horas">
                         <h2>Mês que menos jogou</h2>
-                        <p>Maio</p>
+                        <p id="mes_menos_jogado"></p>
                     </div>
                 </div>
 
@@ -106,7 +106,7 @@
                     <img class="imagens" src="assets/img/imagens-site/hora.png">
                     <div class="texto-card-horas">
                         <h2>Médias de vezes jogadas por mês</h2>
-                        <p>5</p>
+                        <p id="vezes_jogadas_mes"></p>
                     </div>
                 </div>
 
@@ -227,30 +227,16 @@
         <div class="modal">
             <button class="fechar" id="fechar">&times;</button>
             <div class="box-modal">
-                <h1 class="titulos">Escolha o mês que você quer cadastrar as horas</h1>
-                <select onfocus="nulo()" id="select_mes">
-                    <option value="#" id="vazio">Selecione um mês</option>
-                    <option value="janeiro">Janeiro</option>
-                    <option value="fevereiro">Fevereiro</option>
-                    <option value="marco">Março</option>
-                    <option value="abril">Abril</option>
-                    <option value="maio">Maio</option>
-                    <option value="junho">Junho</option>
-                    <option value="julho">Julho</option>
-                    <option value="agosto">Agosto</option>
-                    <option value="setembro">Setembro</option>
-                    <option value="outubro">Outubro</option>
-                    <option value="novembro">Novembro</option>
-                    <option value="dezembro">Dezembro</option>
-                </select>
+                <h1 class="titulos">Relatório de gameplays</h1>
 
-                <h2 style="font-family: 'Chinese Rocks', sans-serif;">Digite seu tempo de jogo</h2>
+                <h2 class="titulos">Digite a data que você jogou</h2>
+                <input type="text" placeholder="aaaa/mm/dd" id="input_data_jogo">
 
-                <div style="font-family: 'Hapna-Slab', sans-serif; font-weight: bold;" id="paragrafo_personagem">
-                    <input type="text" placeholder="00:00:00" id="hora_de_jogo">
-                
-                </div>
-                
+                <h2 class="titulos">Digite seu tempo de jogo</h2>
+                <input type="text" placeholder="00:00:00" id="hora_de_jogo">
+
+                <h2 class="titulos">Digite a quantidade de missões que você jogou</h2>
+                <input type="number" id="input_qtd_missoes">
 
             </div>
             <div class="botao-modal">

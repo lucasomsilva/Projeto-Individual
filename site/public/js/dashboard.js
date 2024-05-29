@@ -124,12 +124,14 @@ function mostrarPersonagem() {
 
 function registrarTempoDeJogo() {
 
-    var mes = select_mes.value;
+    var dataJogo = input_data_jogo.value;
     var tempoDeJogo = hora_de_jogo.value;
+    var qtdMissoes = input_qtd_missoes.value;
 
     if (
-        mes == "" ||
-        tempoDeJogo == ""
+        dataJogo == "" ||
+        tempoDeJogo == "" ||
+        qtdMissoes == ""
     ) {
         return false;
     } else {
@@ -139,8 +141,9 @@ function registrarTempoDeJogo() {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                mesServer: mes,
+                dataJogoServer: dataJogo,
                 tempoDeJogoServer: tempoDeJogo,
+                qtdMissoesServer: qtdMissoes,
                 fkUsuarioServer: idUsuario
             }),
         })
