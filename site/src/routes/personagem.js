@@ -15,8 +15,8 @@ router.post("/registrarTempoDeJogo", function (req, res) {
     personagemController.registrarTempoDeJogo(req, res);
 });
 
-router.get("/registrarTempoDeJogo/:idUsuario", function (req, res) {
-    personagemController.mostrarMesjogados(req, res);
+router.get("/mostrarMesJogados/:idUsuario", function (req, res) {
+    personagemController.mostrarMesJogados(req, res);
 });
 
 module.exports = router;

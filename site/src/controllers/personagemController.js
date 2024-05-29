@@ -9,7 +9,7 @@ function registrarPersonagem(req, res) {
     }
     if (fkUsuario == undefined) {
         res.status(400).send("A fkUsuario está undefined!");
-    }
+    } 
     personagemModel.registrarPersonagem(personagem, fkUsuario).then(function (resposta) {
         res.status(200).send("Dados inserido com sucesso");
     }).catch(function (erro) {
@@ -47,10 +47,10 @@ function registrarTempoDeJogo(req, res) {
     })
 }
 
-function mostrarMesjogados(req, res) {
+function mostrarMesJogados(req, res) {
     var idUsuario = req.params.idUsuario;
 
-    personagemModel.mostrarMesjogados(idUsuario).then((resposta) => {
+    personagemModel.mostrarMesJogados(idUsuario).then((resposta) => {
         res.status(200).json(resposta);
     });
 }
@@ -59,5 +59,5 @@ module.exports = {
     registrarPersonagem,
     mostrarPersonagem,
     registrarTempoDeJogo,
-    mostrarMesjogados
+    mostrarMesJogados
 };

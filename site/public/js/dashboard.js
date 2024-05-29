@@ -26,6 +26,21 @@ const listaDescricaoPersonagens = [
     'Você é uma pessoa extrovertida e cheia de vida, com um espírito aventureiro e uma personalidade cativante. Você é alguém que valoriza a liberdade e a diversão. Sua energia e entusiasmo são contagiantes, além de ser muito espontâneo e animado, se jogando de cabeça em novos desafios.'
 ];
 
+    const listaIconesPersonagens = [
+        "./assets/img/icones-personagens/icon-arthur.jpg",
+        "./assets/img/icones-personagens/icon-bill.jpg",
+        "./assets/img/icones-personagens/icon-charles.jpg",
+        "./assets/img/icones-personagens/icon-dutch.jpg",
+        "./assets/img/icones-personagens/icon-hosea.jpg",
+        "./assets/img/icones-personagens/icon-javier.jpg",
+        "./assets/img/icones-personagens/icon-jhon.jpg",
+        "./assets/img/icones-personagens/icon-lenny.jpg",
+        "./assets/img/icones-personagens/icon-micah.jpg",
+        "./assets/img/icones-personagens/icon-sadie.jpg",
+        "./assets/img/icones-personagens/icon-sean.jpg",
+        "./assets/img/icones-personagens/icon-uncle.jpg",
+    ];
+
 function selecionarPersonagem() {
     let selectPersonagens = document.getElementById('select_personagens');
     let personagemSelecionado = selectPersonagens.value;
@@ -62,10 +77,13 @@ function nulo() {
     vazio.style.display = 'none';
 }
 
+
 function registrarPersonagem() {
 
-    let selectPersonagens = document.getElementById('select_personagens');
-    let personagem = selectPersonagens.value;
+    // var selectPersonagens = document.getElementById('select_personagens');
+    // var personagem = selectPersonagens.value;
+
+    var personagem = select_personagens.value;
 
     if (
         personagem == ""
@@ -101,7 +119,6 @@ function registrarPersonagem() {
 
         return false;
     }
-
 }
 
 function mostrarPersonagem() {
@@ -115,7 +132,7 @@ function mostrarPersonagem() {
             resposta.json().then((resposta) => {
                 resposta.forEach((resposta) => {
                     if (resposta.nome) {
-                        personagem_escolhido.innerHTML = `${resposta.personagem}`;
+                        personagem_escolhido.innerHTML = `${resposta.nome}`;
                     }
                 });
             });
@@ -170,8 +187,29 @@ function registrarTempoDeJogo() {
     }
 }
 
+function mostrarMesJogados() {
+    fetch(`/personagem/mostrarMesJogados/${idUsuario}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+        .then(function (resposta) {
+            resposta.json().then((resposta) => {
+                resposta.forEach((resposta) => {
+                    if (resposta.nome) {
+                        mes_mais_jogado.innerHTML = `${resposta.personagem}`;
+                    }
+                });
+            });
+        });
+}
+
+
+
 window.onload = function () {
     mostrarPersonagem();
+    mostrarMesJogados();
 };
 
 var idUsuario = sessionStorage.ID_USUARIO;

@@ -1,4 +1,3 @@
-const { mostrarMesjogados } = require("../controllers/personagemController");
 var database = require("../database/config");
 
 function registrarPersonagem(nome, fkUsuario) {
@@ -11,7 +10,7 @@ function registrarPersonagem(nome, fkUsuario) {
 }
 
 function mostrarPersonagem(idUsuario) {
-    console.log("ACESSEI O PERSONAGEM MODEL para buscar o personagem favorito, function mostrarPersonagem()", idUsuario);
+    console.log("ACESSEI O PERSONAGEM MODEL para buscar o personagem favorito, function mostrarPersonagem()", idUsuario );
 
     var instrucao = `   
     select nome from personagem where fkUsuario = ${idUsuario};	
@@ -30,11 +29,11 @@ function registrarTempoDeJogo(dataJogo, tempoDeJogo, fkUsuario) {
     return database.executar(instrucao);
 }
 
-function mostrarPersonagem(idUsuario) {
-    console.log("ACESSEI O PERSONAGEM MODEL para buscar o tempo de jogo do usuário, function mostrarTempoDeJogo()", idUsuario);
+function mostrarMesJogados(idUsuario) {
+    console.log("ACESSEI O PERSONAGEM MODEL para buscar quantidade de tempo que o usuário jogou por mês, function mostrarMesJogados()", idUsuario);
 
     var instrucao = `   
-    select nome from personagem where fkUsuario = ${idUsuario};	
+    SELECT COUNT(idJogo) FROM qtdJogos;
     `;
 
     console.log("Executando a instrução SQL: \n" + instrucao);
@@ -45,5 +44,5 @@ module.exports = {
     registrarPersonagem,
     mostrarPersonagem,
     registrarTempoDeJogo,
-    mostrarMesjogados
+    mostrarMesJogados
 };
