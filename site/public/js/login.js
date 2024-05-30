@@ -30,8 +30,7 @@ function entrar() {
         mensagem_erro.innerHTML = "Insira seus dados para fazer login";
 
         return false;
-    }
-    else {
+    } else {
         setInterval(sumirMensagem, 5000)
         cardErro.style.display = "block";
         mensagem_erro.innerHTML =
