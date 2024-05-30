@@ -78,7 +78,7 @@ function cadastrar() {
             })
         return false;
     }
-}x
+}
 
 function sumirMensagem() {
     cardErro.style.display = "none";

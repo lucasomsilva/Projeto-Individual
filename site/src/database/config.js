@@ -2,10 +2,11 @@ var mysql = require("mysql2");
 var sql = require('mssql');
 
 var mySqlConfig = {
-    host: "localhost",
-    database: "projeto_individual",
-    user: "root",
-    password: "#Vanuza23",
+    host: 'localhost',
+    database: 'projeto_individual',
+    user: 'lucas',
+    password: 'Lucas#123',
+    port: 3308
 };
 
 function executar(instrucao) {
@@ -49,5 +50,5 @@ function executar(instrucao) {
 }
 
 module.exports = {
-    executar
+    executar,
 }
