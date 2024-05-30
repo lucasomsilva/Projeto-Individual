@@ -26,50 +26,51 @@ const listaDescricaoPersonagens = [
     'Você é uma pessoa extrovertida e cheia de vida, com um espírito aventureiro e uma personalidade cativante. Você é alguém que valoriza a liberdade e a diversão. Sua energia e entusiasmo são contagiantes, além de ser muito espontâneo e animado, se jogando de cabeça em novos desafios.'
 ];
 
-    const listaIconesPersonagens = [
-        "./assets/img/icones-personagens/icon-arthur.jpg",
-        "./assets/img/icones-personagens/icon-bill.jpg",
-        "./assets/img/icones-personagens/icon-charles.jpg",
-        "./assets/img/icones-personagens/icon-dutch.jpg",
-        "./assets/img/icones-personagens/icon-hosea.jpg",
-        "./assets/img/icones-personagens/icon-javier.jpg",
-        "./assets/img/icones-personagens/icon-jhon.jpg",
-        "./assets/img/icones-personagens/icon-lenny.jpg",
-        "./assets/img/icones-personagens/icon-micah.jpg",
-        "./assets/img/icones-personagens/icon-sadie.jpg",
-        "./assets/img/icones-personagens/icon-sean.jpg",
-        "./assets/img/icones-personagens/icon-uncle.jpg",
-    ];
+const listaIconesPersonagens = [
+    "./assets/img/icones-personagens/icon-arthur.jpg",
+    "./assets/img/icones-personagens/icon-bill.jpg",
+    "./assets/img/icones-personagens/icon-charles.jpg",
+    "./assets/img/icones-personagens/icon-dutch.jpg",
+    "./assets/img/icones-personagens/icon-hosea.jpg",
+    "./assets/img/icones-personagens/icon-javier.jpg",
+    "./assets/img/icones-personagens/icon-jhon.jpg",
+    "./assets/img/icones-personagens/icon-lenny.jpg",
+    "./assets/img/icones-personagens/icon-micah.jpg",
+    "./assets/img/icones-personagens/icon-sadie.jpg",
+    "./assets/img/icones-personagens/icon-sean.jpg",
+    "./assets/img/icones-personagens/icon-uncle.jpg",
+];
 
 function selecionarPersonagem() {
     let selectPersonagens = document.getElementById('select_personagens');
     let personagemSelecionado = selectPersonagens.value;
     let paragrafoPersonagem = document.getElementById('paragrafo_personagem');
 
-    if (personagemSelecionado === "Arthur") {
+    if (personagemSelecionado == "Arthur Morgan") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[0]}`;
-    } else if (personagemSelecionado === "Jhon") {
+    } else if (personagemSelecionado == "Jhon Marston") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[1]}`;
-    } else if (personagemSelecionado === "Dutch") {
+    } else if (personagemSelecionado == "Dutch van Der Linde") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[2]}`;
-    } else if (personagemSelecionado === "Micah") {
+    } else if (personagemSelecionado == "Micah Bell") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[3]}`;
-    } else if (personagemSelecionado === "Hosea") {
+    } else if (personagemSelecionado == "Hosea Mattews") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[4]}`;
-    } else if (personagemSelecionado === "Lenny") {
+    } else if (personagemSelecionado == "Lenny Summers") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[5]}`;
-    } else if (personagemSelecionado === "Sadie") {
+    } else if (personagemSelecionado == "Sadie Adler") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[6]}`;
-    } else if (personagemSelecionado === "Javier") {
+    } else if (personagemSelecionado == "Javier Escuella") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[7]}`;
-    } else if (personagemSelecionado === "Bill") {
+    } else if (personagemSelecionado == "Bill Williamson") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[8]}`;
-    } else if (personagemSelecionado === "Uncle") {
+    } else if (personagemSelecionado == "Uncle") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[9]}`;
-    } else if (personagemSelecionado === "Charles") {
+    } else if (personagemSelecionado == "Charles Smith") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[10]}`;
-    } else if (personagemSelecionado === "Sean") {
+    } else if (personagemSelecionado == "Sean MacGuire") {
         paragrafoPersonagem.innerHTML = `${listaDescricaoPersonagens[11]}`;
+
     }
 }
 
@@ -129,6 +130,31 @@ function mostrarPersonagem() {
                 resposta.forEach((resposta) => {
                     if (resposta.nome) {
                         personagem_escolhido.innerHTML = `${resposta.nome}`;
+                        if (personagem_escolhido.innerHTML == "Arthur Morgan") {
+                            descricao.innerHTML = `${listaDescricaoPersonagens[0]}`;
+                        } else if (personagem_escolhido.innerHTML == "Jhon Marston") {
+                            descricao.innerHTML = `${listaDescricaoPersonagens[1]}`;
+                        } else if (personagem_escolhido.innerHTML == "Dutch van Der Linde") {
+                            descricao.innerHTML = `${listaDescricaoPersonagens[2]}`;
+                        } else if (personagem_escolhido.innerHTML == "Micah Bell") {
+                            descricao.innerHTML = `${listaDescricaoPersonagens[3]}`;
+                        } else if (personagem_escolhido.innerHTML == "Hosea Mattews") {
+                            descricao.innerHTML = `${listaDescricaoPersonagens[4]}`;
+                        } else if (personagem_escolhido.innerHTML == "Lenny Summers") {
+                            descricao.innerHTML = `${listaDescricaoPersonagens[5]}`;
+                        } else if (personagem_escolhido.innerHTML == "Sadie Adler") {
+                            descricao.innerHTML = `${listaDescricaoPersonagens[6]}`;
+                        } else if (personagem_escolhido.innerHTML == "Javier Escuella") {
+                            descricao.innerHTML = `${listaDescricaoPersonagens[7]}`;
+                        } else if (personagem_escolhido.innerHTML == "Bill Williamson") {
+                            descricao.innerHTML = `${listaDescricaoPersonagens[8]}`;
+                        } else if (personagem_escolhido.innerHTML == "Uncle") {
+                            descricao.innerHTML = `${listaDescricaoPersonagens[9]}`;
+                        } else if (personagem_escolhido.innerHTML == "Charles Smith") {
+                            descricao.innerHTML = `${listaDescricaoPersonagens[10]}`;
+                        } else if (personagem_escolhido.innerHTML == "Sean MacGuire") {
+                            descricao.innerHTML = `${listaDescricaoPersonagens[11]}`;
+                        }
                     }
                 });
             });
@@ -136,7 +162,7 @@ function mostrarPersonagem() {
 }
 
 function mostrarPersonagemMaisEscolhido() {
-    fetch(`/personagem/mostrarPersonagemMaisEscolhido/${nomePersonagem}`, {
+    fetch(`/personagem/mostrarPersonagemMaisEscolhido`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -145,8 +171,8 @@ function mostrarPersonagemMaisEscolhido() {
         .then(function (resposta) {
             resposta.json().then((resposta) => {
                 resposta.forEach((resposta) => {
-                    if (resposta.nomePersonagem) {
-                        personagem_mais_escolhido.innerHTML = `${resposta.nomePersonagem}`;
+                    if (resposta.nome) {
+                        personagem_mais_escolhido.innerHTML = `${resposta.nome}`;
                     }
                 });
             });

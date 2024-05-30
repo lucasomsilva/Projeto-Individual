@@ -12,8 +12,8 @@ function registrarTempoDeJogo(dataJogo, tempoDeJogo, fkUsuario) {
 function mostrarMesJogados(idUsuario) {
     console.log("ACESSEI O TEMPOJOGO MODEL para buscar quantidade de tempo que o usuário jogou por mês, function mostrarMesJogados()", idUsuario);
 
-    var instrucao = `   
-    SELECT MONTH (dataJogo) AS mes, COUNT(*) AS quantidade FROM qtdJogos GROUP BY MONTH(dataJogo) ORDER BY quantidade DESC LIMIT 1;`;
+    var instrucao = `
+    SELECT MONTH(dataJogo) AS mes FROM qtdJogos WHERE fkUsuario = ${idUsuario} AND dataJogo BETWEEN '2020-01-01' AND '2020-12-31' GROUP BY mes order by COUNT(idJogo) desc limit 1;`;
 
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);

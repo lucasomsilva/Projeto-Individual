@@ -47,7 +47,6 @@ function registrarTempoDeJogo() {
 }
 
 function mostrarMesJogados() {
-    mes_mais_jogado.innerHTML = "oi"
     fetch(`/tempoJogo/mostrarMesJogados/${idUsuario}`, {
         method: 'GET',
         headers: {
@@ -57,8 +56,8 @@ function mostrarMesJogados() {
         .then(function (resposta) {
             resposta.json().then((resposta) => {
                 resposta.forEach((resposta) => {
-                    if (resposta.idJogo) {
-                        mes_mais_jogado.innerHTML = `alo`;
+                    if (resposta.dataJogo) {
+                        mes_mais_jogado.innerHTML = `${resposta.dataJogo}`;
                     }
                 });
             });

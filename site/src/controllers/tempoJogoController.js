@@ -30,6 +30,31 @@ function mostrarMesJogados(req, res) {
     });
 }
 
+// function mostrarMesJogados(req, res) {
+//     var idUsuario = req.params.idUsuario;
+
+//     tempoJogoModel.mostrarMesJogados(idUsuario)
+//         .then(
+//             function (resultado) {
+//                 if (resultado.length > 0) {
+//                     res.status(200).json(resultado);
+//                 } else {
+//                     res.status(204).send("Nenhum resultado encontrado!");
+//                 }
+//             }
+//         )
+//         .catch(
+//             function (erro) {
+//                 console.log(erro);
+//                 console.log(
+//                     "Houve um erro",
+//                     erro.sqlMessage
+//                 );
+//                 res.status(500).json(erro.sqlMessage);
+//             }
+//         );
+// }
+
 module.exports = {
     registrarTempoDeJogo,
     mostrarMesJogados

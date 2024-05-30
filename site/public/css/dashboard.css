@@ -306,6 +306,7 @@ body {
     background-color: #E2E8F0;
     margin-left: 22%;
     margin-top: -2%;
+    margin-right: 2%;
     font-family: 'Hapna-Slab', sans-serif;
     box-shadow: 0 0 10px rgba(0, 0, 0, 2);
     font-weight: bold;
@@ -314,6 +315,11 @@ body {
     height: 150px;
     display: flex;
     align-items: center;
+}
+
+#descricao {
+    margin-right: 2%;
+    margin-left: 1%;
 }
 
 .metricas-horas,
