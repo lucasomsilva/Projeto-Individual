@@ -134,3 +134,21 @@ function mostrarPersonagem() {
             });
         });
 }
+
+function mostrarPersonagemMaisEscolhido() {
+    fetch(`/personagem/mostrarPersonagemMaisEscolhido/${nomePersonagem}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+        .then(function (resposta) {
+            resposta.json().then((resposta) => {
+                resposta.forEach((resposta) => {
+                    if (resposta.nomePersonagem) {
+                        personagem_mais_escolhido.innerHTML = `${resposta.nomePersonagem}`;
+                    }
+                });
+            });
+        });
+}

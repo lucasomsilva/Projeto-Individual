@@ -1,6 +1,7 @@
 window.onload = function () {
     mostrarPersonagem();
     mostrarMesJogados();
+    mostrarPersonagemMaisEscolhido();
 };
 
 var idUsuario = sessionStorage.ID_USUARIO;

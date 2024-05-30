@@ -25,7 +25,16 @@ function mostrarPersonagem(req, res) {
     });
 }
 
+function mostrarPersonagemMaisEscolhido(req, res) {
+    var idUsuario = req.params.idUsuario;
+
+    personagemModel.mostrarPersonagemMaisEscolhido(idUsuario).then((resposta) => {
+        res.status(200).json(resposta);
+    });
+}
+
 module.exports = {
     registrarPersonagem,
-    mostrarPersonagem
+    mostrarPersonagem,
+    mostrarPersonagemMaisEscolhido
 };
