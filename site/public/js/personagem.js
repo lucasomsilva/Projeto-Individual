@@ -222,7 +222,7 @@ function graficoPersonagens() {
                             display: true,
                             text: 'Top 4 - Personagens preferidos dos usuários',
                             font: {
-                                size: 20
+                                size: 15
                             },
                             padding: {
                                 top: 3,

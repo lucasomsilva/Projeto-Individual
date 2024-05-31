@@ -296,10 +296,11 @@ body {
     background-color: #E2E8F0;
     border-radius: 12px;
     margin-top: 15%;
-    width: 30%;
-    height: 100%;
+    height: 300px;
+    width: 300px;
     display: flex;
     justify-content: center;
+    padding: 5px;
 }
 
 .descricao-personagem,
@@ -398,6 +399,7 @@ body {
 .tabela-metricas {
     width: 70%;
     margin-top: 2%;
+    margin-bottom: 2%;
     height: 50%;
     background-color: #E2E8F0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 2);
@@ -422,41 +424,4 @@ body {
 .tabela-metricas h3 {
     border-bottom: black solid;
     font-family: 'Chinese Rocks', sans-serif;
-}
-
-/* GRAFICO DE NPC */
-
-.interacoes {
-    display: flex;
-    width: 80%;
-    height: 50%;
-    flex-direction: column;
-    margin-left: 20%;
-    margin-top: 5%;
-}
-
-.grafico2 {
-    background-color: #E2E8F0;
-    margin-top: 5%;
-    width: 30%;
-    height: 350px;
-    border-radius: 12px;
-}
-
-.grafico-npc {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.metricas-npc {
-    background-color: #E2E8F0;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 2);
-    width: 50%;
-    height: 50%;
-    text-align: center;
-    margin-top: 10%;
-    font-family: 'Hapna-Slab', sans-serif;
-    font-weight: bold;
 }
