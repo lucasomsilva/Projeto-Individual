@@ -1,3 +1,4 @@
+const { totalJogos } = require("../controllers/tempoJogoController");
 var database = require("../database/config");
 
 function registrarTempoDeJogo(dataJogo, tempoDeJogo, fkUsuario) {
@@ -42,9 +43,19 @@ function graficoMes(idUsuario) {
     return database.executar(instrucao);
 }
 
+function totalJogos(idUsuario) {
+    console.log("TEMPOJOGO MODEL ACESSADO! \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> \n\n function totalJogos()", idUsuario);
+    var instrucao = `
+    select count(idJogo) as quantidade from qtdJogos inner join usuario on fkUsuario = idUsuario where idUsuario = ${idUsuario};
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     registrarTempoDeJogo,
     mostrarMaisJogados,
     mostrarMenosJogados,
-    graficoMes
+    graficoMes,
+    totalJogos
 }

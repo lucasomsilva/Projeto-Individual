@@ -23,4 +23,8 @@ router.get("/graficoMes/:idUsuario", function (req, res) {
     tempoJogoController.graficoMes(req, res);
 });
 
+router.get("/totalJogos/:idUsuario", function (req, res) {
+    tempoJogoController.totalJogos(req, res);
+});
+
 module.exports = router;
