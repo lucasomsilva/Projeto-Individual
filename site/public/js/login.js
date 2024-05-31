@@ -1,23 +1,26 @@
-window.addEventListener('load', function getRandomImage() {
-    document.section.style.backgroundImage = `url(${getRandomImage()})`;
-});
 
-function getRandomImage() {
-    const listaImagens = [
-        '../assets/img/imagens-aleatorias/imagem-2.jpg',
-        '../assets/img/imagens-aleatorias/imagem-3.jpg',
-        '../assets/img/imagens-aleatorias/imagem-4.jpg',
-        '../assets/img/imagens-aleatorias/imagem-5.jpg',
-        '../assets/img/imagens-aleatorias/imagem-6.jpg',
-        '../assets/img/imagens-aleatorias/imagem-7.jpg',        
-        '../assets/img/imagens-aleatorias/imagem-9.jpg',
-        '../assets/img/imagens-aleatorias/imagem-10.jpg',
-        '../assets/img/imagens-aleatorias/imagem-11.jpg',
-        '../assets/img/imagens-aleatorias/imagem-12.jpg'
-    ];
+window.onload = function() {
+    randomBackground();
+};
 
-    const randomIndex = Math.floor(Math.random() * listaImagens.length);
-    return images[randomIndex];
+let background = document.getElementById("background-login");
+
+const listaImagens = [
+    '../assets/img/imagens-aleatorias/imagem-2.jpg',
+    '../assets/img/imagens-aleatorias/imagem-3.jpg',
+    '../assets/img/imagens-aleatorias/imagem-4.jpg',
+    '../assets/img/imagens-aleatorias/imagem-5.jpg',
+    '../assets/img/imagens-aleatorias/imagem-6.jpg',
+    '../assets/img/imagens-aleatorias/imagem-7.jpg',        
+    '../assets/img/imagens-aleatorias/imagem-9.jpg',
+    '../assets/img/imagens-aleatorias/imagem-10.jpg',
+    '../assets/img/imagens-aleatorias/imagem-11.jpg',
+    '../assets/img/imagens-aleatorias/imagem-12.jpg'
+];
+
+function randomBackground() {
+    const randomImage = Math.floor(Math.random() * listaImagens.length);
+    background.style.background = `url(${listaImagens[randomImage]})`
 }
 
 function entrar() {

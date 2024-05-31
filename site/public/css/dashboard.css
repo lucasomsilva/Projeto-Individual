@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: 'Hapna-Slab';
-    src: url(/site/public/assets/fonts/Hapna-Slab-Light.ttf);
+    src: url(../assets/fonts/FontsFree-Net-Hapna-Slab-Serif.ttf);
 }
 
 ::selection {

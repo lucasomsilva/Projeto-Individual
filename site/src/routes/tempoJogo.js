@@ -7,8 +7,20 @@ router.post ("/registrarTempoDeJogo", function (req, res) {
     tempoJogoController.registrarTempoDeJogo(req, res);
 });
 
-router.get ("/mostrarMesJogados/:idUsuario", function (req, res) {
-    tempoJogoController.mostrarMesJogados(req, res);
+router.get ("/mostrarMaisJogados/:idUsuario", function (req, res) {
+    tempoJogoController.mostrarMaisJogados(req, res);
+});
+
+router.get ("/mostrarMenosJogados/:idUsuario", function (req, res) {
+    tempoJogoController.mostrarMenosJogados(req, res);
+});
+
+// router.get ("/mostrarMediaMissoes/:idUsuario", function (req, res) {
+//     tempoJogoController.mostrarMediaMissoes(req, res);
+// });
+
+router.get("/graficoMes/:idUsuario", function (req, res) {
+    tempoJogoController.graficoMes(req, res);
 });
 
 module.exports = router;

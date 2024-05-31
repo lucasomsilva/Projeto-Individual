@@ -23,6 +23,7 @@ create table qtdJogos (
 idJogo      int auto_increment,
 dataJogo	date,
 tempoDejogo time,
+qtdMissoes  int,
 fkUsuario   int,
 primary key (idJogo),
 constraint fk_qtdjogo_usuario foreign key (fkUsuario) references usuario (idUsuario)

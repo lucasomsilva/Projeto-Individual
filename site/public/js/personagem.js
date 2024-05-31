@@ -178,3 +178,71 @@ function mostrarPersonagemMaisEscolhido() {
             });
         });
 }
+
+function graficoPersonagens() {
+
+    fetch(`/personagem/graficoPersonagens/${idUsuario}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao buscar os dados');
+            }
+            return response.json();
+        })
+        .then(data => {
+            var ctx = document.getElementById('grafico3');
+
+            var labels = data.map(item => item.nome); 
+            var dados = data.map(item => item.quantidade); 
+
+            console.log(labels, dados)
+
+            new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Personagens',
+                        data: dados,
+                        backgroundColor: ['#E19494',
+                        '#A14A4A',
+                        '#831919',
+                        '#4F0F0F'],
+                        borderColor: '#7F1D1D',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Top 4 - Personagens preferidos dos usuários',
+                            font: {
+                                size: 20
+                            },
+                            padding: {
+                                top: 3,
+                                bottom: 3
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1,
+                                precision: 0
+                            }
+                        }
+                    }
+                }
+            }
+            });
+        })
+        .catch(error => {
+            console.error('Erro no gráfico', error);
+        });
+}

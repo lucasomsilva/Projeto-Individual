@@ -30,8 +30,21 @@ function mostrarPersonagemMaisEscolhido(nomePersonagem) {
     return database.executar(instrucao);
 }
 
+
+function graficoPersonagens(idUsuario) {
+    console.log("ACESSEI O PERSONAGEM MODEL para buscar quais os 4 personagens preferidos do usuário, function graficoPersonagens()", idUsuario);
+
+    var instrucao = `   
+    SELECT nome, COUNT(*) AS quantidade FROM personagem GROUP BY nome ORDER BY quantidade DESC LIMIT 4;
+    `;
+
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     registrarPersonagem,
     mostrarPersonagem,
-    mostrarPersonagemMaisEscolhido
+    mostrarPersonagemMaisEscolhido,
+    graficoPersonagens
 };

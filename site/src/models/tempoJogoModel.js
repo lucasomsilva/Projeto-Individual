@@ -9,8 +9,8 @@ function registrarTempoDeJogo(dataJogo, tempoDeJogo, fkUsuario) {
     return database.executar(instrucao);
 }
 
-function mostrarMesJogados(idUsuario) {
-    console.log("ACESSEI O TEMPOJOGO MODEL para buscar quantidade de tempo que o usuário jogou por mês, function mostrarMesJogados()", idUsuario);
+function mostrarMaisJogados(idUsuario) {
+    console.log("ACESSEI O TEMPOJOGO MODEL para buscar o mês que o usuário mais jogou, function mostrarMaisJogados()", idUsuario);
 
     var instrucao = `
     SELECT MONTH(dataJogo) AS mes FROM qtdJogos WHERE fkUsuario = ${idUsuario} AND dataJogo BETWEEN '2020-01-01' AND '2020-12-31' GROUP BY mes order by COUNT(idJogo) desc limit 1;`;
@@ -19,7 +19,32 @@ function mostrarMesJogados(idUsuario) {
     return database.executar(instrucao);
 }
 
+function mostrarMenosJogados(idUsuario) {
+    console.log("ACESSEI O TEMPOJOGO MODEL para buscar o mês que o usuário menos jogou, function mostrarMenosJogados()", idUsuario);
+
+    var instrucao = `
+    SELECT MONTH(dataJogo) AS mes FROM qtdJogos WHERE fkUsuario = ${idUsuario} AND dataJogo BETWEEN '2020-01-01' AND '2020-12-31' GROUP BY mes order by COUNT(idJogo) asc limit 1;`;
+
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
+function graficoMes(idUsuario) {
+    console.log("ACESSEI O TEMPOJOGO MODEL para buscar quantidade de vezes jogadas por mês, function graficoMes()", idUsuario);
+
+    var instrucao = `   
+    SELECT COUNT(idJogo) AS qtd, MONTH(dataJogo) AS mes FROM qtdJogos WHERE fkUsuario = ${idUsuario}
+    AND dataJogo BETWEEN '2020-01-01' AND '2020-12-31' GROUP BY mes order by month(dataJogo);
+    `;
+
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     registrarTempoDeJogo,
-    mostrarMesJogados
+    mostrarMaisJogados,
+    mostrarMenosJogados,
+    graficoMes
 }

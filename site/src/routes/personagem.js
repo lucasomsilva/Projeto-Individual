@@ -15,4 +15,8 @@ router.get ("/mostrarPersonagemMaisEscolhido", function (req, res) {
     personagemController.mostrarPersonagemMaisEscolhido(req, res);
 });
 
+router.get("/graficoPersonagens/:idUsuario", function (req, res) {
+    personagemController.graficoPersonagens(req, res);
+});
+
 module.exports = router;
