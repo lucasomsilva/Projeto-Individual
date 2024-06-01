@@ -6,6 +6,18 @@ function cadastrar() {
     var senhaVar = input_senha.value;
     var confirmacaoSenhaVar = input_confirmacaoSenha.value;
 
+    let contemArrobaPonto = emailVar.indexOf("@") > -1 && emailVar.indexOf(".") > -1;
+    let senhaContemNumero = false;
+    let contemCaractereEspecial = senhaVar.indexOf("#") > -1 || senhaVar.indexOf("_") > -1 || senhaVar.indexOf("$") > -1 || senhaVar.indexOf("&") > -1 || senhaVar.indexOf("@") > -1 || senhaVar.indexOf("*") > -1;
+
+    for (let contadorNumero = 0; contadorNumero < senhaVar.length; contadorNumero++) {
+        for (let contadorIndex = 0; contadorIndex < 9; contadorIndex++) {
+            if (senhaVar.indexOf(contadorIndex) != -1) {
+                senhaContemNumero = true;
+            }
+        }
+    }
+
     if (
         nomeVar == "" ||
         sobrenomeVar == "" ||
@@ -15,22 +27,19 @@ function cadastrar() {
     ) {
         cardErro.style.display = "block";
         cardErro.style.marginTop = "100px";
-        mensagem_erro.innerHTML =
-            "Todos os campos precisam estar preenchidos";
+        mensagem_erro.innerHTML = "Todos os campos precisam estar preenchidos";
 
         return false;
     } else if (senhaVar != confirmacaoSenhaVar) {
         cardErro.style.display = "block";
         cardErro.style.marginTop = "100px";
-        mensagem_erro.innerHTML =
-            "As senhas são diferentes!";
+        mensagem_erro.innerHTML = "As senhas são diferentes!";
 
         return false;
-    } else if (emailVar.indexOf('@') < 0 || emailVar.indexOf('.') < 0) {
+    } else if (contemArrobaPonto == false) {
         cardErro.style.display = "block";
         cardErro.style.marginTop = "100px";
-        mensagem_erro.innerHTML =
-            "Insira um e-mail válido!";
+        mensagem_erro.innerHTML = "Insira um e-mail válido!";
 
         return false;
     } else if (senhaVar.length < 8) {
@@ -38,10 +47,19 @@ function cadastrar() {
         cardErro.style.marginTop = "100px";
         mensagem_erro.innerHTML = "A senha deve conter pelo menos 8 dígitos";
 
-        // for (let posicao = 0; posicao <= senhaVar.length; posicao++) {
-        //     if (senhaVar.indexOf(""))
-        // }
+        return false;
+    } else if (senhaContemNumero == false) {
+        cardErro.style.display = "block";
+        cardErro.style.marginTop = "100px";
+        mensagem_erro.innerHTML = "A senha deve conter pelo menos 1 número";
 
+        return false;
+    } else if (contemCaractereEspecial == false) {
+        cardErro.style.display = "block";
+        cardErro.style.marginTop = "100px";
+        mensagem_erro.innerHTML = "A senha deve conter pelo menos 1 caractere especial";
+
+        return false;
     } else {
         setInterval(sumirMensagem, 5000);
         cardErro.style.display = "block";
