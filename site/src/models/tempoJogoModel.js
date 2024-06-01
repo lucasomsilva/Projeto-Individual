@@ -1,10 +1,9 @@
-const { totalJogos } = require("../controllers/tempoJogoController");
 var database = require("../database/config");
 
-function registrarTempoDeJogo(dataJogo, tempoDeJogo, fkUsuario) {
-    console.log("TEMPO DE JOGO REGISTRADO COM SUCESSO! \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function registrarTempoDeJogo()", dataJogo, tempoDeJogo, fkUsuario);
+function registrarTempoDeJogo(dataJogo, tempoDeJogo, qtdMissoes, fkUsuario) {
+    console.log("TEMPO DE JOGO REGISTRADO COM SUCESSO! \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function registrarTempoDeJogo()", dataJogo, tempoDeJogo, qtdMissoes, fkUsuario);
     var instrucao = `
-        INSERT INTO qtdJogos (dataJogo, tempoDeJogo, fkUsuario) VALUES ('${dataJogo}', '${tempoDeJogo}', '${fkUsuario}');
+        INSERT INTO qtdJogos (dataJogo, tempoDeJogo, qtdMissoes, fkUsuario) VALUES ('${dataJogo}', '${tempoDeJogo}', '${qtdMissoes}', '${fkUsuario}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);

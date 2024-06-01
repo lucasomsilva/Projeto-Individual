@@ -152,3 +152,44 @@ function graficoMes() {
             console.error('Erro no gráfico', error);
         });
 }
+
+function totalJogos() {
+    console.log(idUsuario)
+    fetch(`/tempoJogo/totalJogos/${idUsuario}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+        .then(function (resposta) {
+            console.log("Dados recebidos: ", JSON.stringify(resposta));
+            resposta.json()
+                .then((json) => {
+                    console.log(json);
+                    console.log(json[0].qtdJogos);
+
+                    var quantidade = json[0].quantidade;
+                    console.log(quantidade);
+
+                    var qtdTotal = document.getElementById("dentro_descricao")
+                    qtdTotal.innerHTML = `<b>${quantidade}</b>`;
+
+                    if (quantidade < 10) {
+                        descricao_metricas.innerHTML = `Você é um <b style="color: #E19494;">jogador iniciante</b>! Você ainda precisa explorar mais o jogo! Red Dead Redemption tem muito a te oferecer ainda e é apenas o começo da sua longa jornada nesse mundo. `;
+                    } else if (quantidade <= 20) {
+                        descricao_metricas.innerHTML = `Você é um <b style="color: #D41936;">jogador casual</b>! Já está começando a se familiarizar com o jogo! Já sabe o nome de todos da gangue? Já tem o seu personagem preferido? Aos poucos vai entendendo e explorando cada vez mais o jogo, e descobrindo mais sobre a fauna do jogo.`;
+                    } else if (quantidade <= 30) {
+                        descricaometricas.innerHTML = `Você é um <b style="color: #961C26;>jogador moderado</b>! Já explorou grande parte do mundo de Red Dead! Posso apostar que já está conhecendo cada pedaço do mapa, cada cidade e conhecendo todos os animais do mundo selvagem, além de claro, ter caçado alguns animais lendário `;
+                    } else if (quantidade <= 40) {
+                        descricao_metricas.innerHTML = `Você é um <b style="color: #7E1921;">jogador avançado</b>! Já fez muita coisa e tem tudo para ser o melhor explorador do jogo! Já passou por muitos perrengues no jogo e já sabe todos os segredos, um verdadeiro explorador e aventureiro. `;
+                    } else {
+                        descricao_metricas.innerHTML = `HARDCORE! Você é um <b style="color: #470A0A;">jogador hardcore</b>! Você com certeza, DOMINA o jogo como ninguém! Já coleciona animais lendários caçados e sabe mais do jogo do que os próprios desenvolvedores. Parabéns você faz parte da gangue van Der Linde.`;
+                    }
+
+                })
+        })
+        .catch(function (erro) {
+            console.error('Erro desconhecido na API.');
+        }
+        );
+}

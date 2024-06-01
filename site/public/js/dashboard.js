@@ -44,4 +44,5 @@ window.onload = function() {
     mostrarMenosJogados();
     graficoMes();
     graficoPersonagens();
+    totalJogos();
 };

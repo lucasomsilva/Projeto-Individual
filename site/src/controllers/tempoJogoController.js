@@ -3,6 +3,7 @@ var tempoJogoModel = require("../models/tempoJogoModel");
 function registrarTempoDeJogo(req, res) {
     var dataJogo = req.body.dataJogoServer;
     var tempoDeJogo = req.body.tempoDeJogoServer;
+    var qtdMissoes = req.body.qtdMissoesServer;
     var fkUsuario = req.body.fkUsuarioServer;
 
     if (dataJogo == undefined) {
@@ -11,11 +12,14 @@ function registrarTempoDeJogo(req, res) {
     if (tempoDeJogo == undefined) {
         res.status(400).send("O tempoDeJogo está undefined!");
     }
+    if (qtdMissoes == undefined) {
+        res.status(400). send("O qtdMissoes está undefined");
+    }
     if (fkUsuario == undefined) {
         res.status(400).send("A fkUsuario está undefined!");
     }
 
-    tempoJogoModel.registrarTempoDeJogo(dataJogo, tempoDeJogo, fkUsuario).then(function (resposta) {
+    tempoJogoModel.registrarTempoDeJogo(dataJogo, tempoDeJogo, qtdMissoes,fkUsuario).then(function (resposta) {
         res.status(200).send("Dados inserido com sucesso");
     }).catch(function (erro) {
         res.status(500).json(erro.sqlMessage);
@@ -100,7 +104,7 @@ function graficoMes(req, res) {
 function totalJogos(req, res) {
     var idUsuario = req.params.idUsuario;
 
-    console.log(`estou na funcao listar quantidade de livros do controller`);
+    console.log(`estou na funcao mostrar o total de jogos do controller`);
     tempoJogoModel.totalJogos(idUsuario)
         .then(
             function (resultado) {
