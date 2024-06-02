@@ -126,7 +126,7 @@ function graficoMes() {
                     plugins: {
                         title: {
                             display: true,
-                            text: 'Horas jogadas por mês',
+                            text: 'Quantidade de vezes jogadas em cada mês',
                             font: {
                                 size: 20
                             },
