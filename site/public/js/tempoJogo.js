@@ -56,8 +56,32 @@ function mostrarMaisJogados() {
         .then(function (resposta) {
             resposta.json().then((resposta) => {
                 resposta.forEach((resposta) => {
-                    if (resposta.mesMaisJogado) {
-                        mes_mais_jogado.innerHTML = `${resposta.mesMaisJogado}`;
+                    if (resposta.mes) {
+                        if (resposta.mes == 1) {
+                            mes_mais_jogado.innerHTML = 'Janeiro';
+                        } else if (resposta.mes == 2) {
+                            mes_mais_jogado.innerHTML = 'Fevereiro';
+                        } else if (resposta.mes == 3) {
+                            mes_mais_jogado.innerHTML = 'Março';
+                        } else if (resposta.mes == 4) {
+                            mes_mais_jogado.innerHTML = 'Abril';
+                        } else if (resposta.mes == 5) {
+                            mes_mais_jogado.innerHTML = 'Maio';
+                        } else if (resposta.mes == 6) {
+                            mes_mais_jogado.innerHTML = 'Junho';
+                        } else if (resposta.mes == 7) { 
+                            mes_mais_jogado.innerHTML = 'Julho';
+                        } else if (resposta.mes == 8) {
+                            mes_mais_jogado.innerHTML = 'Agosto';
+                        } else if (resposta.mes == 9) {
+                            mes_mais_jogado.innerHTML = 'Setembro';
+                        } else if (resposta.mes == 10) {
+                            mes_mais_jogado.innerHTML = 'Outubro';
+                        } else if (resposta.mes == 11) {
+                            mes_mais_jogado.innerHTML = 'Novembro';
+                        } else {
+                            mes_mais_jogado.innerHTML = 'Dezembro';
+                        }
                     }
                 });
             });
@@ -74,8 +98,50 @@ function mostrarMenosJogados() {
         .then(function (resposta) {
             resposta.json().then((resposta) => {
                 resposta.forEach((resposta) => {
-                    if (resposta.mesMenosJogado) {
-                        mes_menos_jogado.innerHTML = `${resposta.mesMenosJogado}`;
+                    if (resposta.mes) {
+                        if (resposta.mes == 1) {
+                            mes_menos_jogado.innerHTML = 'Janeiro';
+                        } else if (resposta.mes == 2) {
+                            mes_menos_jogado.innerHTML = 'Fevereiro';
+                        } else if (resposta.mes == 3) {
+                            mes_menos_jogado.innerHTML = 'Março';
+                        } else if (resposta.mes == 4) {
+                            mes_menos_jogado.innerHTML = 'Abril';
+                        } else if (resposta.mes == 5) {
+                            mes_menos_jogado.innerHTML = 'Maio';
+                        } else if (resposta.mes == 6) {
+                            mes_menos_jogado.innerHTML = 'Junho';
+                        } else if (resposta.mes == 7) { 
+                            mes_menos_jogado.innerHTML = 'Julho';
+                        } else if (resposta.mes == 8) {
+                            mes_menos_jogado.innerHTML = 'Agosto';
+                        } else if (resposta.mes == 9) {
+                            mes_menos_jogado.innerHTML = 'Setembro';
+                        } else if (resposta.mes == 10) {
+                            mes_menos_jogado.innerHTML = 'Outubro';
+                        } else if (resposta.mes == 11) {
+                            mes_menos_jogado.innerHTML = 'Novembro';
+                        } else {
+                            mes_menos_jogado.innerHTML = 'Dezembro';
+                        }
+                    }
+                });
+            });
+        });
+}
+
+function mostrarMediaMissoes() {
+    fetch(`/tempoJogo/mostrarMediaMissoes/${idUsuario}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+        .then(function (resposta) {
+            resposta.json().then((resposta) => {
+                resposta.forEach((resposta) => {
+                    if (resposta.media) {
+                        missoes_jogadas_mes.innerHTML = `${resposta.media}`;
                     }
                 });
             });
@@ -115,7 +181,7 @@ function graficoMes() {
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: 'Quantidades jogadas por mês',
+                        label: 'Quantidades jogadas',
                         data: dados,
                         backgroundColor: '#7F1D1D',
                         borderColor: '#7F1D1D',

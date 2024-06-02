@@ -14,18 +14,6 @@ function abrirModalPersonagem() {
 
 }
 
-function abrirModalQuiz() {
-    const modal = document.getElementById('janela-modal2');
-    modal.classList.add('abrir');
-
-    modal.addEventListener('click', (e) => {
-        if (e.target.id == 'fechar' || e.target.id == 'janela-modal2') {
-            modal.classList.remove('abrir')
-        }
-    });
-
-}
-
 function abrirModalJogosMes() {
     const modal = document.getElementById('janela-modal3');
     modal.classList.add('abrir');
@@ -42,6 +30,7 @@ window.onload = function() {
     mostrarPersonagemMaisEscolhido();
     mostrarMaisJogados();
     mostrarMenosJogados();
+    mostrarMediaMissoes();
     graficoMes();
     graficoPersonagens();
     totalJogos();

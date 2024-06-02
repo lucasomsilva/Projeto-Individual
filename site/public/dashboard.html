@@ -28,11 +28,6 @@
                 <p>Adicionar personagem</p>
             </button>
             <br>
-            <button onclick="abrirModalQuiz()">
-                <img class="imagens" src="assets/img/imagens-site/interrogacao.png">
-                <p>Quiz sobre Red Dead</p>
-            </button>
-            <br>
             <button onclick="abrirModalJogosMes()">
                 <img class="imagens" src="assets/img/imagens-site/relogio.svg">
                 <p>Registrar novo jogo</p>
@@ -101,8 +96,8 @@
                 <div class="card">
                     <img class="imagens" src="assets/img/imagens-site/hora.png">
                     <div class="texto-card-horas">
-                        <h2>Médias de vezes jogadas por mês</h2>
-                        <p id="vezes_jogadas_mes"></p>
+                        <h2>Médias de missões jogadas por mês</h2>
+                        <p id="missoes_jogadas_mes"></p>
                     </div>
                 </div>
 
@@ -177,19 +172,6 @@
             <div style="font-family: 'Hapna-Slab', sans-serif; font-weight: bold;" id="paragrafo_personagem"></div>
             <div class="botao-modal">
                 <button class="button-modal" onclick="registrarPersonagem()">Registrar</button>
-            </div>
-        </div>
-    </section>
-
-    <section class="janela-modal" id="janela-modal2">
-        <div class="modal">
-            <button class="fechar" id="fechar">&times;</button>
-            <div class="box-modal">
-                <h1 class="titulos">Você sabe tudo sobre Red Dead Redemption 2?</h1>
-
-            </div>
-            <div class="botao-modal">
-                <button class="button-modal" onclick="iniciarQuiz()">Iniciar</button>
             </div>
         </div>
     </section>

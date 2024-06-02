@@ -42,13 +42,13 @@ function mostrarMenosJogados(req, res) {
     });
 }
 
-// function mostrarMediaMissoes(req, res) {
-//     var idUsuario = req.params.idUsuario;
+function mostrarMediaMissoes(req, res) {
+    var idUsuario = req.params.idUsuario;
 
-//     tempoJogoModel.mostrarMediaMissoes(idUsuario).then((resposta) => {
-//         res.status(200).json(resposta);
-//     });
-// }
+    tempoJogoModel.mostrarMediaMissoes(idUsuario).then((resposta) => {
+        res.status(200).json(resposta);
+    });
+}
 
 // function mostrarMaisJogados(req, res) {
 //     var idUsuario = req.params.idUsuario;
@@ -74,7 +74,6 @@ function mostrarMenosJogados(req, res) {
 //             }
 //         );
 // }
-
 
 function graficoMes(req, res) {
     var idUsuario = req.params.idUsuario;
@@ -134,6 +133,6 @@ module.exports = {
     mostrarMaisJogados,
     mostrarMenosJogados,
     graficoMes,
-    totalJogos
-    // mostrarMediaMissoes
+    totalJogos,
+    mostrarMediaMissoes
 };

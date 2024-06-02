@@ -29,6 +29,13 @@ function mostrarMenosJogados(idUsuario) {
     return database.executar(instrucao);
 }
 
+function mostrarMediaMissoes(idUsuario) {
+    console.log("TEMPOJOGO MODEL ACESSADO! \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> \n\n function mostrarMediaMissoes()", idUsuario);
+    var instrucao = ` SELECT round(avg(qtdMissoes), 0) AS media FROM qtdJogos WHERE fkUsuario = ${idUsuario};
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
 
 function graficoMes(idUsuario) {
     console.log("ACESSEI O TEMPOJOGO MODEL para buscar quantidade de vezes jogadas por mês, function graficoMes()", idUsuario);
@@ -56,5 +63,6 @@ module.exports = {
     mostrarMaisJogados,
     mostrarMenosJogados,
     graficoMes,
-    totalJogos
+    totalJogos,
+    mostrarMediaMissoes
 }

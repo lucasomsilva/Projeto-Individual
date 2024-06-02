@@ -15,9 +15,9 @@ router.get ("/mostrarMenosJogados/:idUsuario", function (req, res) {
     tempoJogoController.mostrarMenosJogados(req, res);
 });
 
-// router.get ("/mostrarMediaMissoes/:idUsuario", function (req, res) {
-//     tempoJogoController.mostrarMediaMissoes(req, res);
-// });
+router.get ("/mostrarMediaMissoes/:idUsuario", function (req, res) {
+    tempoJogoController.mostrarMediaMissoes(req, res);
+});
 
 router.get("/graficoMes/:idUsuario", function (req, res) {
     tempoJogoController.graficoMes(req, res);
