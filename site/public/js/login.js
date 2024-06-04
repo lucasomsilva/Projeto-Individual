@@ -1,44 +1,7 @@
-
-window.onload = function() {
-    randomBackground();
-};
-
-let background = document.getElementById("background-login");
-
-const listaImagens = [
-    '../assets/img/imagens-aleatorias/imagem-2.jpg',
-    '../assets/img/imagens-aleatorias/imagem-3.jpg',
-    '../assets/img/imagens-aleatorias/imagem-4.jpg',
-    '../assets/img/imagens-aleatorias/imagem-5.jpg',
-    '../assets/img/imagens-aleatorias/imagem-6.jpg',
-    '../assets/img/imagens-aleatorias/imagem-7.jpg',        
-    '../assets/img/imagens-aleatorias/imagem-9.jpg',
-    '../assets/img/imagens-aleatorias/imagem-10.jpg',
-    '../assets/img/imagens-aleatorias/imagem-11.jpg',
-    '../assets/img/imagens-aleatorias/imagem-12.jpg'
-];
-
-function randomBackground() {
-    const randomImage = Math.floor(Math.random() * listaImagens.length);
-    background.style.background = `url(${listaImagens[randomImage]})`
-}
-
 function entrar() {
 
     var emailVar = input_email.value;
     var senhaVar = input_senha.value;
-
-    if (emailVar == "" || senhaVar == "") {
-        cardErro.style.display = "block"
-        mensagem_erro.innerHTML = "Insira seus dados para fazer login";
-
-        return false;
-    } else {
-        setInterval(sumirMensagem, 5000)
-        cardErro.style.display = "block";
-        mensagem_erro.innerHTML =
-            "Indo para a sua dashboard...";
-    }
 
     console.log("FORM LOGIN: ", emailVar);
     console.log("FORM SENHA: ", senhaVar);
@@ -58,6 +21,11 @@ function entrar() {
 
             if (resposta.ok) {
                 console.log(resposta);
+            
+                setInterval(sumirMensagem, 5000)
+                cardErro.style.display = "block";
+                mensagem_erro.innerHTML =
+                    "Indo para a sua dashboard...";
 
                 resposta.json().then(json => {
                     console.log(json);
@@ -70,12 +38,14 @@ function entrar() {
                         window.location = "dashboard.html";
                     }, 1000);
                 });
+                
             } else {
+                cardErro.style.display = "block"
+                mensagem_erro.innerHTML = "Houve um erro ao tentar realizar o login";
+
                 console.log("Houve um erro ao tentar realizar o login!");
                 resposta.text().then(texto => {
                     console.error(texto);
-                    cardErro.style.display = "block"
-                    mensagem_erro.innerHTML = "Houve um erro ao tentar realizar o login";
 
                     return false;
                 });

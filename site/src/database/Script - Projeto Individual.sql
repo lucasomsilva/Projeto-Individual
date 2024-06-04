@@ -15,7 +15,8 @@ idPersonagem int auto_increment,
 nome 		 varchar(45),
 fkUsuario    int,
 primary key (idPersonagem),
-constraint fk_usuario_personagem foreign key (fkUsuario) references usuario (idUsuario)
+constraint fk_usuario_personagem foreign key (fkUsuario) references usuario (idUsuario),
+constraint uk_usuario_personagem unique key (fkUsuario)
 )auto_increment = 10;
 
 create table qtdJogos (
