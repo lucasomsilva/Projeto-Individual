@@ -108,6 +108,11 @@ function registrarPersonagem() {
                         console.log(JSON.stringify(json));
                     });
 
+                } else {
+                    setInterval(sumirMensagem, 5000)
+                    cardErro.style.display = "block";
+                    mensagem_erro.innerHTML =
+                        "Você já registrou um personagem";
                 }
             })
             .catch(function (resposta) {
@@ -196,8 +201,8 @@ function graficoPersonagens() {
         .then(data => {
             var ctx = document.getElementById('grafico3');
 
-            var labels = data.map(item => item.nome); 
-            var dados = data.map(item => item.quantidade); 
+            var labels = data.map(item => item.nome);
+            var dados = data.map(item => item.quantidade);
 
             console.log(labels, dados)
 
@@ -209,9 +214,9 @@ function graficoPersonagens() {
                         label: 'Personagens',
                         data: dados,
                         backgroundColor: ['#E19494',
-                        '#A14A4A',
-                        '#831919',
-                        '#4F0F0F'],
+                            '#A14A4A',
+                            '#831919',
+                            '#4F0F0F'],
                         borderColor: '#7F1D1D',
                         borderWidth: 1
                     }]
@@ -227,22 +232,26 @@ function graficoPersonagens() {
                             padding: {
                                 top: 3,
                                 bottom: 3
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            ticks: {
-                                stepSize: 1,
-                                precision: 0
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    stepSize: 1,
+                                    precision: 0
+                                }
                             }
                         }
                     }
                 }
-            }
             });
         })
         .catch(error => {
             console.error('Erro no gráfico', error);
         });
+}
+
+function sumirMensagem() {
+    cardErro.style.display = "none"
 }
