@@ -50,9 +50,6 @@ function entrar() {
             console.log(erro);
         })
 
-        cardErro.style.display = "block"
-        mensagem_erro.innerHTML = "E-mail ou senha inválidos";
-
     return false;
 }
 
