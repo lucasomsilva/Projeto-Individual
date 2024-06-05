@@ -38,11 +38,7 @@ function entrar() {
                         window.location = "dashboard.html";
                     }, 1000);
                 });
-                
             } else {
-                cardErro.style.display = "block"
-                mensagem_erro.innerHTML = "Houve um erro ao tentar realizar o login";
-
                 console.log("Houve um erro ao tentar realizar o login!");
                 resposta.text().then(texto => {
                     console.error(texto);
@@ -53,6 +49,9 @@ function entrar() {
         }).catch(function (erro) {
             console.log(erro);
         })
+
+        cardErro.style.display = "block"
+        mensagem_erro.innerHTML = "E-mail ou senha inválidos";
 
     return false;
 }
