@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://wallpapercg.com/media/ts_orig/11991.webp"/>
+</p>
+
 # Projeto-Individual
 Projeto Individual sobre o jogo Red Dead Redemption 2, neste projeto, falo sobre a ligação do jogo comigo e quando o jogo entrou na minha vida.
 
