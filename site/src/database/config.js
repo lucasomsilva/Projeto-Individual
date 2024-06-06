@@ -2,11 +2,11 @@ var mysql = require("mysql2");
 var sql = require('mssql');
 
 var mySqlConfig = {
-    host: 'localhost',
-    database: 'projeto_individual',
-    user: 'lucas',
-    password: 'Lucas#123',
-    port: 3308
+    host: 'seusDadosAqui',
+    database: 'seusDadosAqui',
+    user: 'seusDadosAqui',
+    password: 'seusDadosAqui',
+    port: 'seusDadosAqui'
 };
 
 function executar(instrucao) {
